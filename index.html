@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Website Title</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- Include Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&family=Pacifico&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&family=Pacifico&display=swap");
+
+      body {
+        font-family: "Manrope", sans-serif;
+        overflow-x: hidden;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      .logos {
+        overflow: hidden;
+        padding: 60px 0;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+      }
+
+      .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+
+      .logos:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+      }
+
+      .logos:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+      }
+
+      /* .logos:hover .logos-slide {
+  animation-play-state: paused;
+} */
+
+      .logos-slide {
+        display: inline-block;
+        animation: 35s slide infinite linear;
+      }
+
+      .logos-slide img {
+        height: 25px;
+        margin: 0 40px;
+      }
+      .custom-navbar {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  background: white;
+  border-radius: 10px;
+  height: 62px;
+  margin-top: 32px;
+  margin-left: 34px;
+  margin-right: 34px;
+}
+
+.form-inline .btn-outline-secondary {
+    color: #000;
+    border: none;
+  }
+
+.sticky-top {
+  top: 32px;
+}
+
+.nav-link {
+  color: #151515;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.nav-item.active .nav-link,
+.nav-link:hover {
+  border-bottom: 1px solid #a9b7be;
+}
+
+.signup-button {
+  background: #4b97b8;
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-radius: 0;
+  }
+
+  .custom-navbar .container {
+    background: white;
+  }
+
+  .sticky-top {
+    top: 0;
+  }
+  
+  .navbar-brand {
+    text-align: center;
+  }
+  
+  .navbar-toggler {
+    float: right;
+  }
+
+  .nav-link {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 32px;
+    line-height: 22px;
+  }
+
+  .navbar-collapse {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 20px 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .form-inline .btn-outline-secondary {
+    color: #4b97b8;
+    border: 1px solid;
+    border-color: #4b97b8;
+  }
+
+  .form-inline .nav-link,
+  .form-inline .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .navbar-toggler-icon {
+    /* You can add a custom SVG or image here */
+  }
+}
+
+
+      .hero-section {
+        background: url("./bg.png") no-repeat center center; /* Replace with your image path */
+        background-size: cover;
+        height: 80vh;
+        padding: 100px 0; /* Adjust padding to fit your design */
+        margin: 24px;
+        margin-bottom: 0px;
+        margin-top: -70px;
+        border-radius: 20px;
+        display: flex;
+        align-items: end;
+      }
+
+      @media (max-width: 991.98px) { 
+        .hero-section {
+          margin-top: 0;
+      }
+
+      .hero-text {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+      .hero-text {
+        color: #ffffff; /* Replace with your desired text color */
+
+        margin-bottom: 20px; /* Space for the buttons */
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 56px;
+        line-height: 72px;
+        margin-left: 72px;
+        margin-right: 72px;
+      }
+
+      .btn-primary {
+        background-color: #4b97b8;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 8px 16px 8px 16px;
+        border-radius: 8px;
+        border: none;
+      }
+
+      .btn-outline-secondary {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 8px 16px 8px 16px;
+        border-radius: 8px;
+        border-color: #ffffff;
+        color: #ffffff;
+      }
+
+      .btn-primary:hover {
+        background-color: #3a7792;
+      }
+
+      .btn-outline-secondary:hover {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #000000;
+      }
+
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-outline-secondary {
+        margin-right: 10px; /* Space between buttons */
+      }
+
+      .hero-logos {
+        gap: 64px;
+      }
+
+      .hero-logos img {
+        height: 25px; /* Adjust to your logo size */
+        margin: 0 10px; /* Space between logos */
+        opacity: 0.5; /* Logos less prominent */
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .hero-logos img:hover {
+        opacity: 1; /* Full color on hover */
+      }
+
+      .section-title {
+        color: #151515;
+        font-size: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 700;
+        line-height: 72px;
+        word-wrap: break-word;
+      }
+
+      .footer-title {
+        color: #151515;
+        font-size: 32px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 700;
+        line-height: 72px;
+        word-wrap: break-word;
+      }
+
+      .section-title-white {
+        color: #ffffff;
+        font-size: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 500;
+        line-height: 72px;
+        word-wrap: break-word;
+      }
+
+      .statistics-section .card {
+        background-color: #efefef; /* White background */
+        border-radius: 16px; /* Rounded corners */
+        display: flex;
+        border: none;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 358px;
+      }
+
+      .statistics-section .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .statistics-section .card-number {
+        font-size: 80px; /* Large number size */
+        line-height: 109.28px;
+        color: #294a5d; /* Text color for the numbers */
+        font-weight: 500;
+      }
+
+      .statistics-section .card-number-text {
+        font-size: 24px; /* Large number size */
+        line-height: 32.78px;
+        color: #000; /* Text color for the numbers */
+        font-weight: 400;
+      }
+
+      .statistics-section .card-subtitle {
+        font-size: 1rem; /* Subtitle size */
+        color: #6c757d; /* Subtitle color */
+        margin-bottom: 1rem;
+      }
+
+      .statistics-section .card-text {
+        color: #333333; /* Dark grey color for the text */
+        font-size: 18px; /* Larger font size for the title */
+        font-weight: bold;
+        margin-bottom: 16px;
+        text-align: start;
+        font-size: 30px;
+        line-height: 40.98px;
+      }
+
+      .space {
+        margin-bottom: 48px !important;
+      }
+
+      .statistics-section .card-info {
+        color: #666666; /* Medium grey for the info text */
+        font-size: 14px; /* Smaller font size for the info text */
+        margin-bottom: 24px;
+        text-align: start;
+      }
+
+      .statistics-section .icon-image {
+        width: 85px; /* Adjust the size as needed */
+        height: auto;
+        margin-top: 16px;
+        align-self: end; /* Center the icon horizontally */
+      }
+
+      .testimonial-section {
+        background-color: #e0ecef; /* Adjust to match the image background */
+        padding-top: 100px;
+      }
+
+      .testimonial-section h2 {
+        color: #333; /* Title color */
+        margin-bottom: 0; /* No bottom margin */
+      }
+
+
+      .testimonial-card {
+        background: white;
+        padding: 2rem;
+        margin: 1rem 0;
+        border: none;
+        height: 271px;
+        width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: scale(1.03); /* Scale card on hover */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .testimonial-card blockquote {
+        position: relative;
+        font-size: 1rem;
+        line-height: 1.5;
+        quotes: "“" "”" "‘" "’";
+      }
+
+      .testimonial-card blockquote::before {
+        content: open-quote;
+        font-size: 2em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+        color: #333; /* Quote marks color */
+      }
+
+      .testimonial-card blockquote::after {
+        content: close-quote;
+      }
+
+      .testimonial-card p {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .testimonial-footer {
+        display: flex;
+        justify-content: flex-end; /* Align HSBC logo to the right */
+        align-items: center;
+        margin-top: 1.5rem;
+        gap: 15px;
+      }
+
+      .line {
+        border: 0.5px solid lightgrey;
+        width: 100%;
+      }
+
+      .testimonial-logo {
+        width: 100px; /* Logo size */
+        height: auto;
+      }
+
+      .request-demo-section {
+        background-color: #e9ebdc; /* Match the background color to your image */
+        color: #333; /* Text color */
+      }
+
+      .request-demo-section h2 {
+        color: #333; /* Title color */
+      }
+
+      .request-demo-section form {
+        background-color: #fff; /* Form background */
+        padding: 3rem;
+        border-radius: 8px; /* Match to your image's form style */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      }
+
+      .request-demo-section .form-control {
+        height: 40px;
+        padding: 8px, 16px, 8px, 16px;
+        border-radius: 8px;
+        border: 1px;
+        border: 1px solid #ebebeb;
+      }
+
+      .request-demo-section .btn-demo {
+        background-color: #88c057; /* Button color */
+        border: none;
+        border-radius: 20px; /* Rounded button edges */
+        padding: 0.75rem 2rem; /* Button padding */
+        color: white; /* Text color */
+        margin-top: 1rem; /* Space above the button */
+        transition: background-color 0.3s ease;
+      }
+
+      .request-demo-section .btn-demo:hover {
+        background-color: #79ad49; /* Slightly darker on hover */
+      }
+
+      .request-demo-section label {
+        font-weight: normal; /* Adjust label font weight as needed */
+      }
+
+      .footer-section {
+        background-color: #f5f5f5; /* Adjust to match the image */
+        color: #333; /* Adjust text color as needed */
+      }
+
+      .footer-section h4 {
+        color: #333; /* Title color */
+        margin-bottom: 1rem;
+      }
+
+      .footer-section p {
+        font-size: 0.9rem; /* Adjust font size as needed */
+        margin-bottom: 0.5rem; /* Spacing between lines */
+      }
+
+      .footer-section p i {
+        margin-right: 0.5rem; /* Space between icon and text */
+      }
+
+      .footer-section .text-center {
+        margin-top: 2rem; /* Space above the copyright text */
+      }
+
+      .footer-section a {
+        color: #333; /* Link color */
+        text-decoration: none; /* No underline */
+        margin: 0 0.5rem; /* Spacing between links */
+      }
+
+      .services-section {
+        background-color: #294a5d;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .news .swiper-slide .card {
+        height: 480px;
+        width: 338.76px;
+        background: none;
+        border: none;
+      }
+
+      .news .swiper-slide .card img {
+        height: 480px;
+        width: 338.76px;
+        border-radius: 8px;
+      }
+
+      .news .swiper {
+        /* right: -300px; */
+        height: 100%;
+        width: 70vw;
+      }
+
+      .swiper-slide .card {
+        height: 329px;
+        width: 368px;
+        background: none;
+        border: none;
+      }
+
+      .swiper-slide .card img {
+        height: 244px;
+        border-radius: 8px;
+      }
+
+      .swiper-slide .card-title {
+        color: white;
+        font-size: 16px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 700;
+        line-height: 24px;
+        word-wrap: break-word;
+        text-align: start;
+      }
+
+      .swiper-slide .card-text {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        font-family: Manrope;
+        font-weight: 400;
+        line-height: 24px;
+        word-wrap: break-word;
+        text-align: start;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-controls {
+        display: flex;
+        justify-content: flex-end;
+        height: 46px;
+        width: 80px;
+      }
+
+      .swiper-button-prev2,
+      .swiper-button-next2 {
+        background: none;
+        color: #000; /* This should be the color of your icons */
+        border: none;
+        cursor: pointer;
+      }
+
+      .swiper-button-next2:focus,
+      .swiper-button-prev2:focus {
+        outline: none;
+      }
+
+      .swiper-button-prev2::after {
+        font-size: 15px;
+        border: 1.5px solid black;
+        border-radius: 100px;
+        padding: 10px 14px;
+      }
+
+      .swiper-button-next2::after {
+        font-size: 15px;
+        border: 1.5px solid black;
+        border-radius: 100px;
+        padding: 10px 14px;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        background: none;
+        color: #ffffff; /* This should be the color of your icons */
+        border: none;
+        cursor: pointer;
+      }
+
+      .swiper-button-next:focus,
+      .swiper-button-prev:focus {
+        outline: none;
+      }
+
+      .swiper-button-prev::after {
+        font-size: 15px;
+        border: 1.5px solid white;
+        border-radius: 100px;
+        padding: 10px 14px;
+      }
+
+      .swiper-button-next::after {
+        font-size: 15px;
+        border: 1.5px solid white;
+        border-radius: 100px;
+        padding: 10px 14px;
+      }
+
+      .test-top {
+        position: relative;
+        width: 100%;
+        height: 78vh;
+      }
+
+      .shift {
+        position: absolute;
+        right: -500px;
+        transition: all 1s ease;
+        width: fit-content;
+        display: flex;
+      }
+
+      .shift:hover {
+        right: -100px;
+        transition: all 1s ease;
+      }
+
+      .test {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+      }
+
+      .test::before {
+        content: "Clients’\A Feedbacks";
+        position: absolute;
+        color: #294a5d;
+        font-size: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 700;
+        line-height: 72px;
+        right: -90px;
+        white-space: pre;
+        left: 0;
+      }
+
+      .test-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+      }
+
+      .test-2::before {
+        content: "What the\A Employees Say";
+        text-align: left;
+        position: absolute;
+        color: #294a5d;
+        font-size: 48px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 700;
+        line-height: 72px;
+        right: -90px;
+        white-space: pre;
+      }
+
+      .shift-2 {
+        position: absolute;
+        left: -500px;
+        transition: all 1s ease;
+        width: fit-content;
+        display: flex;
+      }
+
+      .shift-2:hover {
+        left: -75px;
+        transition: all 1s ease;
+      }
+
+      /* Existing CSS styles here... */
+      @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee2 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+      /* Responsive adjustments for mobile devices */
+     @media screen and (max-width: 768px) {
+    .shift {
+        position: relative;
+        right: 0;
+        left: 0;
+        transition: none;
+        flex-direction: row; /* Keep it horizontal */
+        animation: marquee 15s linear infinite; /* Apply marquee animation */
+    }
+
+    .shift-2 {
+        position: relative;
+        right: 0;
+        left: 0;
+        transition: none;
+        flex-direction: row; /* Keep it horizontal */
+        animation: marquee2 15s linear infinite; /* Apply marquee animation */
+    }
+
+    /* Adjust other styles for mobile */
+    .test, .test-2 {
+        height: auto;
+        padding-top: 50px;
+    }
+
+    .test::before, .test-2::before {
+        content: attr(data-mobile-title); /* Use data attribute for title */
+        font-size: 36px;
+        line-height: normal;
+        margin-bottom: 20px;
+        top: 0 !important;
+    }
+
+    .testimonial-card {
+        /* width: 100%; */
+        margin: 0.5rem 0;
+    }
+}
+
+      .form-step {
+        display: none;
+      }
+
+      .form-step.active {
+        display: block;
+      }
+
+      /* Style for your buttons */
+      .btn-next,
+      .btn-submit-another {
+        background-color: #adb96f;
+        width: 200px;
+        height: 46px;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      /* Styles for confirmation message */
+      .confirmation-message p {
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .nav-tabs {
+        display: flex;
+        border: none;
+        margin-bottom: 15px;
+      }
+
+      .nav-item {
+        cursor: pointer;
+        flex-grow: 1;
+      }
+
+      .spacer {
+        width: 30px;
+      }
+
+      .nav-item h3 {
+        font-size: 16px;
+        color: #a9b7be;
+        font-weight: 400;
+        margin: 0;
+        padding: 15px 0;
+        border-top: 3px solid #a9b7be;
+      }
+
+      .nav-item.active h3 {
+        color: #4b97b8;
+        border-top: 3px solid #4b97b8;
+      }
+
+      .mt-12 {
+        margin-top: 104px;
+      }
+
+      .mb-8 {
+        margin-bottom: 72px;
+      }
+
+      .copyright {
+        background: #F6F6F6;
+        padding: 15px 100px;
+        font-size: 14px;
+      }
+
+      /* Add more custom styling as needed */
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="custom-navbar navbar navbar-expand-lg sticky-top px-3 py-2">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="./logo.png" alt="Logo" class="logo mr-3" />
+        </a>
+        <!-- Toggler button for mobile -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Navigation Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About ASP</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <!-- Log In and Sign Up -->
+          <form class="form-inline my-2 my-lg-0">
+            <a href="#" class="btn btn-outline-secondary mr-2">Log In</a>
+            <a href="#" class="btn btn-primary signup-button">Sign Up</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1 class="hero-text">
+              Revitalize your workplace with our all-inclusive healthcare
+              services.
+            </h1>
+            <div class="hero-buttons mt-4">
+              <a href="#" class="btn btn-primary">Request for Demo</a>
+              <a href="#" class="btn btn-outline-secondary"
+                >Join our Panel Network</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="hero-logos marquee">
+      <ul class="marquee-content">
+        <li><img src="Logo-1.png" alt="Logo 1" /></li>
+        <li><img src="Logo-2.png" alt="Logo 2" /></li>
+        <li><img src="Logo-3.png" alt="Logo 3" /></li>
+        <li><img src="Logo-4.png" alt="Logo 4" /></li>
+        <li><img src="Logo-5.png" alt="Logo 5" /></li>
+        <li><img src="Logo-6.png" alt="Logo 6" /></li>
+        <li><img src="Logo-7.png" alt="Logo 7" /></li>
+      </ul>
+    </div> -->
+
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="Logo-1.png" alt="Logo 1" />
+        <img src="Logo-2.png" alt="Logo 2" />
+        <img src="Logo-3.png" alt="Logo 3" />
+        <img src="Logo-4.png" alt="Logo 4" />
+        <img src="Logo-5.png" alt="Logo 5" />
+        <img src="Logo-6.png" alt="Logo 6" />
+        <img src="Logo-7.png" alt="Logo 7" />
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section text-center py-5">
+      <div class="container">
+        <h2 class="section-title space mb-4">Why ASP Medical?</h2>
+        <div class="row space">
+          <div class="col-md-4 mb-3">
+            <h2 class="card-number">100</h2>
+            <p class="card-number-text">Panels</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h2 class="card-number">80+</h2>
+            <p class="card-number-text">Client Members</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h2 class="card-number">10</h2>
+            <p class="card-number-text">Years of Service</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 mb-4 d-flex">
+            <div class="card flex-fill">
+              <div class="card-body">
+                <p class="card-text">Experience That Matters</p>
+                <p class="card-info">
+                  Established leaders since 2002, delivering unparalleled
+                  healthcare solutions.
+                </p>
+                <img src="./1.png" alt="Database Icon" class="icon-image" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-4 d-flex">
+            <div class="card flex-fill">
+              <div class="card-body">
+                <p class="card-text">Trusted by Diverse Industries</p>
+                <p class="card-info">
+                  Preferred healthcare partner across [Industry A], [Industry
+                  B], and more.
+                </p>
+                <img src="./2.png" alt="Globe Icon" class="icon-image" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-4 d-flex">
+            <div class="card flex-fill">
+              <div class="card-body">
+                <p class="card-text">Recognized Excellence</p>
+                <p class="card-info">
+                  Featured on TV2, APEA Award winner - Acknowledged for
+                  innovation.
+                </p>
+                <img src="./3.png" alt="Trophy Icon" class="icon-image" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-4 d-flex">
+            <div class="card flex-fill">
+              <div class="card-body">
+                <p class="card-text">Affordability Meets Quality</p>
+                <p class="card-info">
+                  Enjoy premium services without the premium price.
+                </p>
+                <img src="./4.png" alt="Badge Icon" class="icon-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary mt-4">Request for Demo</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col text-left">
+            <h2 class="section-title-white">Services</h2>
+          </div>
+          <div class="col text-right flex-grow-0">
+            <!-- Custom Swiper Controls -->
+            <div class="swiper-controls">
+              <button class="swiper-button-prev"></button>
+              <button class="swiper-button-next"></button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./bg.png" alt="In House Clinic Management" />
+                <div class="card-body">
+                  <h2 class="card-title">In House Clinic Management</h2>
+                  <p class="card-text">
+                    For convenient and free or low cost healthcare
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./bg.png" alt="In House Clinic Management" />
+                <div class="card-body">
+                  <h2 class="card-title">In House Clinic Management</h2>
+                  <p class="card-text">
+                    For convenient and free or low cost healthcare
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./bg.png" alt="In House Clinic Management" />
+                <div class="card-body">
+                  <h2 class="card-title">In House Clinic Management</h2>
+                  <p class="card-text">
+                    For convenient and free or low cost healthcare
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./bg.png" alt="In House Clinic Management" />
+                <div class="card-body">
+                  <h2 class="card-title">In House Clinic Management</h2>
+                  <p class="card-text">
+                    For convenient and free or low cost healthcare
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./bg.png" alt="In House Clinic Management" />
+                <div class="card-body">
+                  <h2 class="card-title">In House Clinic Management</h2>
+                  <p class="card-text">
+                    For convenient and free or low cost healthcare
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./bg.png" alt="In House Clinic Management" />
+                <div class="card-body">
+                  <h2 class="card-title">In House Clinic Management</h2>
+                  <p class="card-text">
+                    For convenient and free or low cost healthcare
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section py-5">
+      <div class="container">
+        <div class="test-top">
+          <div class="test">
+            <div class="shift">
+              <div class="col">
+                <div class="testimonial-card">
+                  <img src="quote.png">
+                    <p>
+                      The standard of service provided by Klinik Pembangunan
+                      has been very good. We have received a lot of positive and
+                      encouraging feedback from our staff.
+                    </p>
+                  <div class="testimonial-footer">
+                    <div class="line"></div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
+                      alt="HSBC Logo"
+                      class="testimonial-logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="testimonial-card">
+                  <img src="quote.png">
+                    <p>
+                      The standard of service provided by Klinik Pembangunan
+                      has been very good. We have received a lot of positive and
+                      encouraging feedback from our staff.
+                    </p>
+                  <div class="testimonial-footer">
+                    <div class="line"></div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
+                      alt="HSBC Logo"
+                      class="testimonial-logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="testimonial-card">
+                  <img src="quote.png">
+                    <p>
+                      The standard of service provided by Klinik Pembangunan
+                      has been very good. We have received a lot of positive and
+                      encouraging feedback from our staff.
+                    </p>
+                  <div class="testimonial-footer">
+                    <div class="line"></div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
+                      alt="HSBC Logo"
+                      class="testimonial-logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-2">
+            <div class="shift-2">
+              <div class="col">
+                <div class="testimonial-card">
+                  <img src="quote.png">
+                    <p>
+                      The standard of service provided by Klinik Pembangunan
+                      has been very good. We have received a lot of positive and
+                      encouraging feedback from our staff.
+                    </p>
+                  <div class="testimonial-footer">
+                    <div class="line"></div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
+                      alt="HSBC Logo"
+                      class="testimonial-logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="testimonial-card">
+                  <img src="quote.png">
+                    <p>
+                      The standard of service provided by Klinik Pembangunan
+                      has been very good. We have received a lot of positive and
+                      encouraging feedback from our staff.
+                    </p>
+                  <div class="testimonial-footer">
+                    <div class="line"></div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
+                      alt="HSBC Logo"
+                      class="testimonial-logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="testimonial-card">
+                  <img src="quote.png">
+                    <p>
+                      The standard of service provided by Klinik Pembangunan
+                      has been very good. We have received a lot of positive and
+                      encouraging feedback from our staff.
+                    </p>
+                  <div class="testimonial-footer">
+                    <div class="line"></div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
+                      alt="HSBC Logo"
+                      class="testimonial-logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News & Promotions Section -->
+    <section class="news py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="section-title">News & Promotions</h2>
+            <div class="row text-right flex-grow-0">
+              <!-- Custom Swiper Controls -->
+              <div class="swiper-controls">
+                <button class="swiper-button-prev swiper-button-prev2"></button>
+                <button class="swiper-button-next swiper-button-next2"></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="swiper mySwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./bg.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./bg.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./bg.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./bg.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./bg.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Request for Demo Section -->
+    <section class="request-demo-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title">Request for Demo</h2>
+        <p class="text-center mb-5">
+          We'll be in touch to arrange a demo that suits your schedule.
+        </p>
+        <form id="demoRequestForm">
+          <div class="nav-tabs">
+            <div class="nav-item active" data-target="#basicInfo">
+              <h3>Basic Info</h3>
+            </div>
+            <div class="spacer"></div>
+            <div class="nav-item" data-target="#companyDetails">
+              <h3>Company Details</h3>
+            </div>
+          </div>
+          <!-- Step 1: Basic Info -->
+          <div class="form-step active" id="stepBasicInfo">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName">First name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="workEmail">Work email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="workEmail"
+                  placeholder="Enter your work email"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="contactNumber">Contact number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="contactNumber"
+                  placeholder="Enter your contact number"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="companyNumber">Company number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="companyNumber"
+                  placeholder="Enter your company number"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="department"
+                  >Which department do you belong in?</label
+                >
+                <select id="department" class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="sales">Sales</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="engineering">Engineering</option>
+                  <!-- Add other department options here -->
+                </select>
+              </div>
+            </div>
+            <button type="button" class="btn btn-next">Next</button>
+          </div>
+          <!-- Step 2: Company Details -->
+          <div class="form-step" id="stepCompanyDetails">
+            <div class="form-group">
+              <label for="workEmail">Work email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="workEmail"
+                placeholder="Enter your work email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="companyNumber">Company number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="companyNumber"
+                placeholder="Enter your company number"
+              />
+            </div>
+            <!-- Other fields as per your second image -->
+            <button type="button" class="btn btn-next">Next</button>
+          </div>
+          <!-- Confirmation Step -->
+          <div class="form-step" id="stepConfirmation">
+            <div class="confirmation-message">
+              <p>Your request has been submitted successfully!</p>
+              <p>
+                We will contact you within X working days to arrange a demo.
+              </p>
+            </div>
+            <button type="button" class="btn btn-submit-another">
+              Submit another form
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <!-- Top Section -->
+        <div class="row">
+          <div class="col-12 mt-12">
+            <h5 class="footer-title">Call Centre / Helpdesk</h5>
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <p><i class="fas fa-print"></i> +604 - 2020909</p>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <p><i class="fab fa-skype"></i> ASP PGHELPDESK</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <p><i class="fas fa-print"></i> +604 - 2020909</p>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <p><i class="fab fa-skype"></i> ASP PGHELPDESK</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p>
+                  Do reach out to us on
+                  <a href="mailto:Helpdesk@aspmedic.com"
+                    >Helpdesk@aspmedic.com</a
+                  >
+                </p>
+                <p>
+                  For general enquiries, please send your queries to
+                  <a href="mailto:Enquiry@aspmedic.com">Enquiry@aspmedic.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Divider -->
+        <hr />
+        <!-- Bottom Section with Two Columns -->
+        <div class="row mb-8">
+          <!-- Kuala Lumpur Office -->
+          <div class="col-md-6">
+            <h5 class="footer-title">Kuala Lumpur Office</h5>
+            <p><i class="fas fa-phone"></i> +603 - 2022677 +603 - 2022677</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Unit 13.2 (Tingkat 13),
+              Wisma Lee Rubber, No. 1, Jalan Melaka, 50100 Kuala Lumpur, Wilayah
+              Persekutuan
+            </p>
+            <!-- Insert map image or embed here -->
+            <img
+              src="path-to-your-map-image.jpg"
+              alt="Map of Kuala Lumpur Office"
+              class="img-fluid"
+            />
+          </div>
+
+          <!-- Penang Office -->
+          <div class="col-md-6">
+            <h5 class="footer-title">Penang Office</h5>
+            <p><i class="fas fa-phone"></i> +604 - 2916765</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> No.3, R-02-09, Setia
+              Triangle Tower Shop Office, Persiaran Kelicap, 11900 Bayan Lepas,
+              Penang.
+            </p>
+            <!-- Insert map image or embed here -->
+            <img
+              src="path-to-your-map-image.jpg"
+              alt="Map of Penang Office"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <!-- Copyright and Links -->
+      
+      </div>
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-between align-items-center">
+            <p class="mb-0">Copyright © ASP Medical Clinic Sdn. Bhd. All Rights Reserved</p>
+            <div>
+              <a href="URL_TO_PERSONAL_DATA_POLICY" class="text-decoration-none">Personal Data Protection Policy</a> |
+              <a href="URL_TO_HEALTHCARE_APPS_TERMS" class="text-decoration-none">ASP Healthcare Apps Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const steps = Array.from(document.querySelectorAll(".form-step"));
+        const nextBtns = Array.from(document.querySelectorAll(".btn-next"));
+        const form = document.getElementById("demoRequestForm");
+        let currentStep = 0;
+
+        function showStep(step) {
+          steps.forEach((s, index) => {
+            s.style.display = index === step ? "block" : "none";
+          });
+        }
+
+        nextBtns.forEach((btn, index) => {
+          btn.addEventListener("click", () => {
+            if (index < steps.length - 1) {
+              currentStep++;
+              showStep(currentStep);
+            } else {
+              // When you're on the last step and the next button is clicked
+              // Hide the form and show the confirmation message
+              form.style.display = "none";
+              document.getElementById("stepConfirmation").style.display =
+                "block";
+            }
+          });
+        });
+
+        // When the "Submit another form" button is clicked, reset the form
+        document
+          .querySelector(".btn-submit-another")
+          .addEventListener("click", () => {
+            form.style.display = "block";
+            currentStep = 0;
+            showStep(currentStep);
+            form.reset(); // Reset the form fields
+          });
+
+        // Initialize the first step
+        showStep(currentStep);
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 18,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        navigation: {
+          nextEl: ".swiper-button-next2",
+          prevEl: ".swiper-button-prev2",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 18,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        },
+      });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
