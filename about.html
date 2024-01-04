@@ -952,6 +952,19 @@ padding-bottom: 48px;
 border-bottom: 1px solid grey;
 }
 
+@media screen and (max-width: 768px) {
+    .content-box {
+        flex-wrap: wrap;
+    }
+
+    .certification-card {
+        flex-wrap: wrap;
+    }
+
+    .career-card {
+        flex-wrap: wrap !important;
+    }
+}
 .content-box h2 {
     width: 300px;
     color: #151515;
@@ -1193,12 +1206,12 @@ align-self: stretch;
     <!-- Hero Section -->
     <section class="about-section">
         <div class="container">
-            <div class="row">
+        
               <div class="col-12 team-picture-placeholder">
                 Team Picture or an image representative of the company culture
               </div>
-            </div>
-            <div class="content-box">
+       
+            <div class="container content-box">
                 <h2>Who are we?</h2>
                 <p>ASP Medical Group, a private limited company in Malaysia was established in 2002. Having being certified with an INTERCERT Accredited ISO 27001:2013 and obtained the MSC status, ASP Medical Group has grown steadily over the years and has established itself as a renown, leading Third Party Administrator (TPA) and Managed Care Organization (MCO) for local corporates as well as Multinational Companies.
                 </br>  </br>
@@ -1364,7 +1377,7 @@ align-self: stretch;
 
   <div class="career-section">
     <div class="container">
-          <div class="row career-card">
+          <div class="career-card">
             <div class="career-image-placeholder"></div>
             <div class="career-box">
             <div class="career-title">Careers</div>
