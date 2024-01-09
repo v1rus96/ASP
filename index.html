@@ -28,6 +28,10 @@
         overflow-x: hidden;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       @keyframes slide {
         from {
           transform: translateX(0);
@@ -71,12 +75,14 @@
 
       .logos-slide {
         display: inline-block;
-        animation: 35s slide infinite linear;
+        animation: 80s slide infinite linear;
       }
 
       .logos-slide img {
-        height: 25px;
+        height: 50px;
         margin: 0 40px;
+        filter: grayscale(1);
+        opacity: 0.5;
       }
       .custom-navbar {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
@@ -135,7 +141,7 @@
   }
 
 .sticky-top {
-  top: 32px;
+  top: 8px;
 }
 
 .nav-link {
@@ -261,6 +267,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        align-items: center;
       }
     }
 
@@ -306,6 +313,9 @@
       .hero-buttons .btn-primary,
       .hero-buttons .btn-outline-secondary {
         margin-right: 10px; /* Space between buttons */
+        width: 198px;
+    height: 46px;
+    padding: 12px;
       }
 
       .hero-logos {
@@ -377,8 +387,8 @@
       .statistics-section .card-number-text {
         font-size: 24px; /* Large number size */
         line-height: 32.78px;
-        color: #000; /* Text color for the numbers */
-        font-weight: 400;
+        color: rgba(0, 0, 0, 0.60); /* Text color for the numbers */
+        font-weight: 300;
       }
 
       .statistics-section .card-subtitle {
@@ -395,6 +405,7 @@
         text-align: start;
         font-size: 30px;
         line-height: 40.98px;
+        font-weight: 600;
       }
 
       .space {
@@ -405,6 +416,7 @@
         color: #666666; /* Medium grey for the info text */
         font-size: 14px; /* Smaller font size for the info text */
         margin-bottom: 24px;
+        font-weight: 300;
         text-align: start;
       }
 
@@ -413,6 +425,12 @@
         height: auto;
         margin-top: 16px;
         align-self: end; /* Center the icon horizontally */
+      }
+
+      .statistics-section .btn-primary {
+        width: 198px;
+        height: 46px;
+        padding: 12px;
       }
 
       .testimonial-section {
@@ -497,9 +515,10 @@
 
       .request-demo-section form {
         background-color: #fff; /* Form background */
-        padding: 3rem;
+        padding: 3rem 10rem;
         border-radius: 8px; /* Match to your image's form style */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        margin: 0 5rem;
       }
 
       .request-demo-section .form-control {
@@ -566,12 +585,20 @@
         height: 100%;
       }
 
+      .services-section .swiper {
+        overflow: visible;
+      }
+
       .swiper-slide {
         text-align: center;
         font-size: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      .swiper-slide a {
+        outline: none;
       }
 
       .form-control::placeholder {
@@ -595,8 +622,12 @@
       .news .swiper-slide .card img {
         background: lightgray 50%;
         height: 480px;
-        width: 338.76px;
+        /* width: 338.76px; */
         border-radius: 8px;
+      }
+
+      .news .swiper-slide {
+        width: 338.76px;
       }
 
       .news .swiper {
@@ -606,8 +637,8 @@
       }
 
       .swiper-slide .card {
-        height: 329px;
-        width: 368px;
+        /* height: 329px;
+        width: 368px; */
         background: none;
         border: none;
       }
@@ -708,7 +739,7 @@
       .test-top {
         position: relative;
         width: 100%;
-        height: 78vh;
+        height: 100%;
       }
 
       .shift {
@@ -777,6 +808,22 @@
         transition: all 1s ease;
       }
 
+      .news .swiper-button-prev2::after {
+        border-color: black;
+        color: #000;
+      }
+
+      .news .swiper-button-next2::after {
+        border-color: black;
+        color: #000;
+      }
+
+      .news .swiper-controls {
+        position: absolute;
+        width: 100px;
+      }
+
+
       /* Existing CSS styles here... */
       @keyframes marquee {
     0% { transform: translateX(100%); }
@@ -826,6 +873,85 @@
         /* width: 100%; */
         margin: 0.5rem 0;
     }
+
+    .request-demo-section form {
+      padding: 2rem;
+      margin: 0 1rem;
+    }
+
+    .navbar-toggler-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.navbar-toggler-icon.open {
+  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="3" d="M4 7l22 22M4 29L26 7"/%3E%3C/svg%3E');
+}
+
+.hero-section {
+  height: 70vh;
+}
+
+.space {
+  flex-wrap: nowrap;
+}
+
+.mr-4 {
+  margin-right: 20px;
+}
+
+.half {
+  width: 50% !important;
+}
+
+.section-title {
+  font-size: 32px;
+}
+
+.statistics-section .card-number {
+  font-size: 56px;
+  line-height: normal;
+}
+
+.statistics-section .card-number-text {
+  font-size: 14px;
+}
+
+.statistics-section .card-text {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.statistics-section .card-info {
+  font-size: 12px;
+  line-height: normal;
+}
+
+.statistics-section .icon-image {
+  width: 50px;
+  height: 50px;
+}
+
+.news .swiper {
+  width: 100%;
+  }
+
+  .ht {
+    height: 50px;
+  }
+
+  .flexit {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+
+
 }
 
       .form-step {
@@ -845,6 +971,47 @@
         padding: 12px;
         color: #ffffff;
         border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .modal-dialog {
+        max-width: 650px;
+      }
+
+      .modal-content {
+        border: none;
+        border-radius: 16px;
+      }
+
+      .modal-title {
+        color: #6794B8;
+        font-family: "Nanum Myeongjo", serif;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 32px; /* 100% */
+      }
+
+      .modal-header {
+        border: none;
+      }
+
+      .btn-modal{
+        background-color: #adb96f;
+        cursor: pointer;
+      }
+
+      .btn-modal:hover{
+        background-color: #7e8945;
+        cursor: pointer;
+      }
+
+      .btn-modal:focus {
+        background-color: #7e8945 !important;
+        cursor: pointer;
+      }
+
+      .btn-modal:active {
+        background-color: #7e8945 !important;
         cursor: pointer;
       }
 
@@ -898,6 +1065,32 @@
         font-size: 14px;
       }
 
+
+      .address-box {
+    display: flex;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
+
+.footer img {
+        margin-right: 16px;
+      }
+
+      .footer p {
+        margin-bottom: 24px;
+      }
+
+      .modal-alert {
+        color: #878C69;
+        background-color: rgba(222, 227, 197, 0.20);
+        border: none;
+      }
+
+      .footer-title {
+        color: #294A5D;
+      }
+
       /* Add more custom styling as needed */
     </style>
   </head>
@@ -918,20 +1111,20 @@
           <!-- Navigation Links -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a href="#" class="nav-link">Services</a>
+              <a href="#servicesSection" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">About ASP</a>
+              <a href="/about.html" class="nav-link">About ASP</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
+              <a href="#demoSection" class="nav-link">Contact</a>
             </li>
           </ul>
           <!-- Log In and Sign Up -->
           <form class="form-inline my-2 my-lg-0">
-            <a href="#" class="btn btn-outline-secondary mr-2">Log In</a>
+            <a href="#" class="btn btn-outline-secondary mr-2 half">Log In</a>
             <!-- Sign Up Dropdown Button -->
-            <div class="btn-group">
+            <div class="btn-group half">
               <button type="button" class="btn btn-primary dropdown-toggle signup-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign Up
               </button>
@@ -956,7 +1149,7 @@
               services.
             </h1>
             <div class="hero-buttons mt-4">
-              <a href="#" class="btn btn-primary">Request for Demo</a>
+              <a href="#demoSection" class="btn btn-primary">Request for Demo</a>
               <a href="#" class="btn btn-outline-secondary"
                 >Join our Panel Network</a
               >
@@ -980,13 +1173,59 @@
 
     <div class="logos">
       <div class="logos-slide">
-        <img src="Logo-1.png" alt="Logo 1" />
-        <img src="Logo-2.png" alt="Logo 2" />
-        <img src="Logo-3.png" alt="Logo 3" />
-        <img src="Logo-4.png" alt="Logo 4" />
-        <img src="Logo-5.png" alt="Logo 5" />
-        <img src="Logo-6.png" alt="Logo 6" />
-        <img src="Logo-7.png" alt="Logo 7" />
+        <img src="clients/img_ncAbbott.png" alt="Logo 1" />
+        <img src="clients/img_ncAgilent.png" alt="Logo 2" />
+        <img src="clients/img_ncAirAsia.png" alt="Logo 3" />
+        <img src="clients/img_ncAMD.png" alt="Logo 4" />
+        <img src="clients/img_ncAnalogDevices.png" alt="Logo 5" />
+        <img src="clients/img_ncASE.png" alt="Logo 6" />
+        <img src="clients/img_ncAvago.png" alt="Logo 7" />
+        <img src="clients/img_ncBakerTilly.png" alt="Logo 6" />
+        <img src="clients/img_ncBankIslam.png" alt="Logo 7" />
+        <img src="clients/img_ncBbraun.png" alt="Logo 6" />
+        <img src="clients/img_ncBenchmark.png" alt="Logo 7" />
+        <img src="clients/img_ncBose.png" alt="Logo 6" />
+        <img src="clients/img_ncBroadcom.png" alt="Logo 7" />
+        <img src="clients/img_ncBSN.png" alt="Logo 6" />
+        <img src="clients/img_ncBursa.png" alt="Logo 7" />
+        <img src="clients/img_ncCELESTICA.png" alt="Logo 7" />
+        <img src="clients/img_ncCIMB.png" alt="Logo 7" />
+        <img src="clients/img_ncContinental.png" alt="Logo 7" />
+        <img src="clients/img_ncDell.png" alt="Logo 7" />
+        <img src="clients/img_ncDongWha.png" alt="Logo 7" />
+        <img src="clients/img_ncFirstSolar.png" alt="Logo 7" />
+        <img src="clients/img_ncFlextronics.png" alt="Logo 7" />
+        <img src="clients/img_ncFUJIE.png" alt="Logo 7" />
+        <img src="clients/img_ncHoneywell.png" alt="Logo 7" />
+        <img src="clients/img_ncHongLeong.png" alt="Logo 7" />
+        <img src="clients/img_ncHSBC.png" alt="Logo 7" />
+        <img src="clients/img_ncInfineon.png" alt="Logo 7" />
+        <img src="clients/img_ncJabil.png" alt="Logo 7" />
+        <img src="clients/img_ncJASolar.png" alt="Logo 7" />
+        <img src="clients/img_ncKellogg.png" alt="Logo 7" />
+        <img src="clients/img_ncKeySight.png" alt="Logo 7" />
+        <img src="clients/img_ncLHDN.png" alt="Logo 7" />
+        <img src="clients/img_ncLumileds.png" alt="Logo 7" />
+        <img src="clients/img_ncMaybank.png" alt="Logo 7" />
+        <img src="clients/img_ncMIDF.png" alt="Logo 7" />
+        <img src="clients/img_ncMMHE.png" alt="Logo 7" />
+        <img src="clients/img_ncMPPP.png" alt="Logo 7" />
+        <img src="clients/img_ncNI.png" alt="Logo 7" />
+        <img src="clients/img_ncNXP.png" alt="Logo 7" />
+        <img src="clients/img_ncOCBC.png" alt="Logo 7" />
+        <img src="clients/img_ncOneworld.png" alt="Logo 7" />
+        <img src="clients/img_ncOnsemi.png" alt="Logo 7" />
+        <img src="clients/img_ncPanasonic.png" alt="Logo 7" />
+        <img src="clients/img_ncPossehl.png" alt="Logo 7" />
+        <img src="clients/img_ncQcells.png" alt="Logo 7" />
+        <img src="clients/img_ncSanmina.png" alt="Logo 7" />
+        <img src="clients/img_ncSC.png" alt="Logo 7" />
+        <img src="clients/img_ncSeagate.png" alt="Logo 7" />
+        <img src="clients/img_ncSME.png" alt="Logo 7" />
+        <img src="clients/img_ncStm.png" alt="Logo 7" />
+        <img src="clients/img_ncSynthomer.png" alt="Logo 7" />
+        <img src="clients/img_ncUOA.png" alt="Logo 7" />
+        <img src="clients/img_ncWD.png" alt="Logo 7" />
       </div>
     </div>
 
@@ -1010,7 +1249,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-3 mb-4 d-flex">
+          <div class="col-lg-3 mb-4 d-flex half">
             <div class="card flex-fill">
               <div class="card-body">
                 <p class="card-text">Experience That Matters</p>
@@ -1022,7 +1261,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 mb-4 d-flex">
+          <div class="col-lg-3 mb-4 d-flex half">
             <div class="card flex-fill">
               <div class="card-body">
                 <p class="card-text">Trusted by Diverse Industries</p>
@@ -1034,7 +1273,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 mb-4 d-flex">
+          <div class="col-lg-3 mb-4 d-flex half">
             <div class="card flex-fill">
               <div class="card-body">
                 <p class="card-text">Recognized Excellence</p>
@@ -1046,7 +1285,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 mb-4 d-flex">
+          <div class="col-lg-3 mb-4 d-flex half">
             <div class="card flex-fill">
               <div class="card-body">
                 <p class="card-text">Affordability Meets Quality</p>
@@ -1058,18 +1297,18 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn btn-primary mt-4">Request for Demo</a>
+        <a href="#demoSection" class="btn btn-primary mt-4">Request for Demo</a>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services-section py-5">
+    <section class="services-section py-5" id="servicesSection">
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col text-left">
             <h2 class="section-title-white">Services</h2>
           </div>
-          <div class="col text-right flex-grow-0">
+          <div class="col text-right flex-grow-0 mr-4">
             <!-- Custom Swiper Controls -->
             <div class="swiper-controls">
               <button class="swiper-button-prev"></button>
@@ -1080,8 +1319,9 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
+              <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
               <div class="card">
-                <img src="./bg.png" alt="In House Clinic Management" />
+                <img src="./s1.png" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">In House Clinic Management</h2>
                   <p class="card-text">
@@ -1089,62 +1329,48 @@
                   </p>
                 </div>
               </div>
+            </a>
             </div>
             <div class="swiper-slide">
+              <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
               <div class="card">
-                <img src="./bg.png" alt="In House Clinic Management" />
+                <img src="./s2.png" alt="In House Clinic Management" />
                 <div class="card-body">
-                  <h2 class="card-title">In House Clinic Management</h2>
+                  <h2 class="card-title">Out-Patient Benefits Administration</h2>
                   <p class="card-text">
                     For convenient and free or low cost healthcare
                   </p>
                 </div>
               </div>
+            </a>
             </div>
             <div class="swiper-slide">
+              <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
               <div class="card">
-                <img src="./bg.png" alt="In House Clinic Management" />
+                <img src="./s3.png" alt="In House Clinic Management" />
                 <div class="card-body">
-                  <h2 class="card-title">In House Clinic Management</h2>
+                  <h2 class="card-title">In-Patient Benefits Administration</h2>
                   <p class="card-text">
                     For convenient and free or low cost healthcare
                   </p>
                 </div>
               </div>
+            </a>
             </div>
             <div class="swiper-slide">
+              <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
               <div class="card">
-                <img src="./bg.png" alt="In House Clinic Management" />
+                <img src="./s4.png" alt="In House Clinic Management" />
                 <div class="card-body">
-                  <h2 class="card-title">In House Clinic Management</h2>
+                  <h2 class="card-title">Work Place Health Screening & Wellness Program</h2>
                   <p class="card-text">
                     For convenient and free or low cost healthcare
                   </p>
                 </div>
               </div>
+            </a>
             </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <img src="./bg.png" alt="In House Clinic Management" />
-                <div class="card-body">
-                  <h2 class="card-title">In House Clinic Management</h2>
-                  <p class="card-text">
-                    For convenient and free or low cost healthcare
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <img src="./bg.png" alt="In House Clinic Management" />
-                <div class="card-body">
-                  <h2 class="card-title">In House Clinic Management</h2>
-                  <p class="card-text">
-                    For convenient and free or low cost healthcare
-                  </p>
-                </div>
-              </div>
-            </div>
+            
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -1161,15 +1387,13 @@
                 <div class="testimonial-card">
                   <img src="quote.png">
                     <p>
-                      The standard of service provided by Klinik Pembangunan
-                      has been very good. We have received a lot of positive and
-                      encouraging feedback from our staff.
+                      Recommended ASP Doctors for their professional and approachable services.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
-                      alt="HSBC Logo"
+                      src="clients/img_ncFUJIE.png"
+                      alt="Fuji Electric (M) Sdn. Bhd."
                       class="testimonial-logo"
                     />
                   </div>
@@ -1179,15 +1403,13 @@
                 <div class="testimonial-card">
                   <img src="quote.png">
                     <p>
-                      The standard of service provided by Klinik Pembangunan
-                      has been very good. We have received a lot of positive and
-                      encouraging feedback from our staff.
+                      Nurses at Kulim In House Clinic are giving excellent services and committed.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
-                      alt="HSBC Logo"
+                      src="clients/img_ncInfineon.png"
+                      alt="Infineon Technologies (M) Sdn. Bhd."
                       class="testimonial-logo"
                     />
                   </div>
@@ -1197,15 +1419,13 @@
                 <div class="testimonial-card">
                   <img src="quote.png">
                     <p>
-                      The standard of service provided by Klinik Pembangunan
-                      has been very good. We have received a lot of positive and
-                      encouraging feedback from our staff.
+                      TPA Admin person in-charged is very diligent and timely in carrying out his duty. Very responsive to our email.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
-                      alt="HSBC Logo"
+                      src="clients/img_ncSynthomer.png"
+                      alt="Synthomer Malaysia"
                       class="testimonial-logo"
                     />
                   </div>
@@ -1220,15 +1440,13 @@
                 <div class="testimonial-card">
                   <img src="quote.png">
                     <p>
-                      The standard of service provided by Klinik Pembangunan
-                      has been very good. We have received a lot of positive and
-                      encouraging feedback from our staff.
+                      ASP Call Centre is very responsive in solving issues related to panel clinic.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
-                      alt="HSBC Logo"
+                      src="clients/img_ncMPPP.png"
+                      alt="Majlis Bandaraya Pulau Pinang"
                       class="testimonial-logo"
                     />
                   </div>
@@ -1238,15 +1456,13 @@
                 <div class="testimonial-card">
                   <img src="quote.png">
                     <p>
-                      The standard of service provided by Klinik Pembangunan
-                      has been very good. We have received a lot of positive and
-                      encouraging feedback from our staff.
+                      All the doctors and nurses located in Sanmina Penang Plant 2 have provided good services. 
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
-                      alt="HSBC Logo"
+                      src="clients/img_ncSanmina.png"
+                      alt="Sanmina-SCI Systems (M) Sdn Bhd"
                       class="testimonial-logo"
                     />
                   </div>
@@ -1256,15 +1472,13 @@
                 <div class="testimonial-card">
                   <img src="quote.png">
                     <p>
-                      The standard of service provided by Klinik Pembangunan
-                      has been very good. We have received a lot of positive and
-                      encouraging feedback from our staff.
+                      Overall service by ASP is satisfactory.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg"
-                      alt="HSBC Logo"
+                      src="clients/img_ncAvago.png"
+                      alt="Avago Technologies (M) Sdn Bhd"
                       class="testimonial-logo"
                     />
                   </div>
@@ -1280,9 +1494,9 @@
     <section class="news py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-8 flexit">
             <h2 class="section-title">News & Promotions</h2>
-            <div class="row text-right flex-grow-0">
+            <div class="row text-right flex-grow-0 ht">
               <!-- Custom Swiper Controls -->
               <div class="swiper-controls">
                 <button class="swiper-button-prev swiper-button-prev2"></button>
@@ -1295,27 +1509,42 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="./bg.png" alt="In House Clinic Management" />
+                    <img src="news/Ask Doctor.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="./bg.png" alt="In House Clinic Management" />
+                    <img src="news/ASP Healthcare Apps.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="./bg.png" alt="In House Clinic Management" />
+                    <img src="news/Clinic E-Declaration Form.jpeg" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="./bg.png" alt="In House Clinic Management" />
+                    <img src="news/Covid-19 Screening.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="./bg.png" alt="In House Clinic Management" />
+                    <img src="news/Covid-19 Test.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="news/Flu shot.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="news/PeKa B40.png" alt="In House Clinic Management" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="news/Post-covid.png" alt="In House Clinic Management" />
                   </div>
                 </div>
               </div>
@@ -1327,13 +1556,13 @@
     </section>
 
     <!-- Request for Demo Section -->
-    <section class="request-demo-section py-5">
+    <section class="request-demo-section py-5" id="demoSection">
       <div class="container">
         <h2 class="text-center mb-4 section-title">Request for Demo</h2>
         <p class="text-center mb-5">
           We'll be in touch to arrange a demo that suits your schedule.
         </p>
-        <form id="demoRequestForm">
+        <form id="demoRequestForm" target="_blank" action="https://formsubmit.co/formsubmit@aspmedic.com" method="POST">
           <div class="nav-tabs">
             <div class="nav-item active" data-target="#basicInfo">
               <h3>Basic Info</h3>
@@ -1352,6 +1581,7 @@
                   type="text"
                   class="form-control"
                   id="firstName"
+                  name="firstName"
                   placeholder="Enter your name"
                 />
               </div>
@@ -1361,6 +1591,7 @@
                   type="email"
                   class="form-control"
                   id="workEmail"
+                  name="workEmail"
                   placeholder="Enter your work email"
                 />
               </div>
@@ -1372,6 +1603,7 @@
                   type="tel"
                   class="form-control"
                   id="contactNumber"
+                  name="contactNumber"
                   placeholder="Enter your contact number"
                 />
               </div>
@@ -1381,6 +1613,7 @@
                   type="text"
                   class="form-control"
                   id="companyNumber"
+                  name="companyNumber"
                   placeholder="Enter your company number"
                 />
               </div>
@@ -1399,7 +1632,7 @@
                 </select>
               </div>
             </div>
-            <div class="form-row center">
+            <div class="form-row center mt-4">
             <button type="button" class="btn btn-next">Next</button>
           </div>
           </div>
@@ -1410,7 +1643,8 @@
               <input
                 type="email"
                 class="form-control"
-                id="workEmail"
+                id="workEmail2"
+                name="workEmail2"
                 placeholder="Enter your work email"
               />
             </div>
@@ -1419,13 +1653,14 @@
               <input
                 type="text"
                 class="form-control"
-                id="companyNumber"
+                id="companyNumber2"
+                name="companyNumber2"
                 placeholder="Enter your company number"
               />
             </div>
             <!-- Other fields as per your second image -->
-            <div class="form-row center">
-            <button type="button" class="btn btn-next">Next</button>
+            <div class="form-row center mt-4">
+            <button type="submit" class="btn btn-next">Submit</button>
           </div>
           </div>
           <!-- Confirmation Step -->
@@ -1436,7 +1671,7 @@
                 We will contact you within X working days to arrange a demo.
               </p>
             </div>
-            <div class="form-row center">
+            <div class="form-row center mt-4">
             <button type="button" class="btn btn-submit-another">
               Submit another form
             </button>
@@ -1446,100 +1681,151 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer bg-light">
-      <div class="container">
-        <!-- Top Section -->
+ <!-- Footer Section -->
+ <footer class="footer">
+  <div class="container">
+    <!-- Top Section -->
+    <div class="row">
+      <div class="col-12 mt-12">
+        <h5 class="footer-title">Call Centre / Helpdesk</h5>
         <div class="row">
-          <div class="col-12 mt-12">
-            <h5 class="footer-title">Call Centre / Helpdesk</h5>
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <p><i class="fas fa-print"></i> +604 - 2020909</p>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <p><i class="fab fa-skype"></i> ASP PGHELPDESK</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <p><i class="fas fa-print"></i> +604 - 2020909</p>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <p><i class="fab fa-skype"></i> ASP PGHELPDESK</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <p>
-                  Do reach out to us on
-                  <a href="mailto:Helpdesk@aspmedic.com"
-                    >Helpdesk@aspmedic.com</a
-                  >
-                </p>
-                <p>
-                  For general enquiries, please send your queries to
-                  <a href="mailto:Enquiry@aspmedic.com">Enquiry@aspmedic.com</a>
-                </p>
-              </div>
-            </div>
+          <div class="col-md-3 col-sm-6">
+            <p>
+                
+                <img src="printer.svg"/>
+                
+                +604 - 2020909</p>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <p>  <img src="phone.svg"/> +604 - 2020909</p>
           </div>
         </div>
-        <!-- Divider -->
-        <hr />
-        <!-- Bottom Section with Two Columns -->
-        <div class="row mb-8">
-          <!-- Kuala Lumpur Office -->
-          <div class="col-md-6">
-            <h5 class="footer-title">Kuala Lumpur Office</h5>
-            <p><i class="fas fa-phone"></i> +603 - 2022677 +603 - 2022677</p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> Unit 13.2 (Tingkat 13),
-              Wisma Lee Rubber, No. 1, Jalan Melaka, 50100 Kuala Lumpur, Wilayah
-              Persekutuan
-            </p>
-            <!-- Insert map image or embed here -->
-            <img
-              src="path-to-your-map-image.jpg"
-              alt="Map of Kuala Lumpur Office"
-              class="img-fluid"
-            />
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <p>  <img src="wa.svg"/> +604 - 2020909</p>
           </div>
-
-          <!-- Penang Office -->
-          <div class="col-md-6">
-            <h5 class="footer-title">Penang Office</h5>
-            <p><i class="fas fa-phone"></i> +604 - 2916765</p>
+          <div class="col-md-3 col-sm-6">
+            <p>   <img src="skype.svg"/> ASP PGHELPDESK</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
             <p>
-              <i class="fas fa-map-marker-alt"></i> No.3, R-02-09, Setia
+              Do reach out to us on 
+              <a href="mailto:Enquiry@aspmedic.com">Helpdesk@aspmedic.com</a></br>
+              For general enquiries, please send your queries to
+              <a href="mailto:Enquiry@aspmedic.com">Enquiry@aspmedic.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <hr />
+    <!-- Bottom Section with Two Columns -->
+    <div class="row mb-8">
+      <!-- Kuala Lumpur Office -->
+      <div class="col-md-6">
+        <h5 class="footer-title">Kuala Lumpur Office</h5>
+        <p> <img src="phone.svg"/> +603 - 2022677 +603 - 2022677</p>
+        <div class="address-box">
+        <p>
+            <img src="pin.svg"/>  Unit 13.2 (Tingkat 13),
+          Wisma Lee Rubber, No. 1, Jalan Melaka, 50100 Kuala Lumpur, Wilayah
+          Persekutuan
+        </p>
+        <img src="waze.svg" />
+        </div>
+        <!-- Insert map image or embed here -->
+        <iframe
+width="100%"
+height="108"
+style="border:0"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade"
+src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+</iframe>
+      </div>
+
+      <!-- Penang Office -->
+      <div class="col-md-6">
+        <h5 class="footer-title">Penang Office</h5>
+        <p> <img src="phone.svg"/> +604 - 2916765</p>
+        <div class="address-box">
+            <p>
+                <img src="pin.svg"/> No.3, R-02-09, Setia
               Triangle Tower Shop Office, Persiaran Kelicap, 11900 Bayan Lepas,
               Penang.
             </p>
-            <!-- Insert map image or embed here -->
-            <img
-              src="path-to-your-map-image.jpg"
-              alt="Map of Penang Office"
-              class="img-fluid"
-            />
-          </div>
+            <img src="waze.svg" />
         </div>
-        <!-- Copyright and Links -->
-      
+        <!-- Insert map image or embed here -->
+        <iframe
+    width="100%"
+        height="108"
+style="border:0"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade"
+src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+</iframe>
       </div>
-      <div class="copyright">
-        <div class="row">
-          <div class="col-md-12 d-flex justify-content-between align-items-center">
-            <p class="mb-0">Copyright © ASP Medical Clinic Sdn. Bhd. All Rights Reserved</p>
-            <div>
-              <a href="URL_TO_PERSONAL_DATA_POLICY" class="text-decoration-none">Personal Data Protection Policy</a> |
-              <a href="URL_TO_HEALTHCARE_APPS_TERMS" class="text-decoration-none">ASP Healthcare Apps Terms & Conditions</a>
-            </div>
-          </div>
+    </div>
+    <!-- Copyright and Links -->
+  
+  </div>
+  <div class="copyright">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-between align-items-center">
+        <p class="mb-0">Copyright © ASP Medical Clinic Sdn. Bhd. All Rights Reserved</p>
+        <div class="copyright-links">
+          <a href="https://aspmedic.com/pdpa.html" class="text-decoration-none">Personal Data Protection Policy</a> |
+          <a href="https://aspmedic.com/appstnc.html" class="text-decoration-none">ASP Healthcare Apps Terms & Conditions</a>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">In-House Clinic Management</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="mb-4" src="bg.png" alt="" width="100%" height="211">
+        <p>Large employers are setting up primary care medical centers within their offices and factories to provide convenient and affordable healthcare for their employees.</p>
+        <p>We can help with:</p>
+        <ul>
+          <li>Setup occupational health clinics for job-related injuries and compensation cases.</li>
+          <li>Offers a range of services from routine check-ups to management of chronic diseases.</li>
+          <li>Employers can arrange for the prescription drugs to be delivered the next day at the office or plant, or even maintain fully stocked pharmacies.</li>
+        </ul>
+        <p>In-House clinics can mean gains in worker productivity and lower health-insurance outlays. A clinic serving a couple thousand employees can probably save millions a year.</p>
+        <div class="alert alert-primary modal-alert d-flex justify-content-between align-items-center" role="alert">
+          Interested and would like to find out more?
+          <button type="button" class="btn btn-primary btn-modal">Contact Us</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Contact Us</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
     <script>
+function toggleIcon(element) {
+  document.querySelector('.navbar-toggler-icon').classList.toggle('open');
+}
+
       var copy = document.querySelector(".logos-slide").cloneNode(true);
       document.querySelector(".logos").appendChild(copy);
 
@@ -1615,7 +1901,7 @@
 
       var swiper = new Swiper(".mySwiper2", {
         slidesPerView: "auto",
-        spaceBetween: 24,
+        spaceBetween: 16,
         navigation: {
           nextEl: ".swiper-button-next2",
           prevEl: ".swiper-button-prev2",
@@ -1623,15 +1909,15 @@
         breakpoints: {
           640: {
             slidesPerView: 1,
-            spaceBetween: 24,
+            spaceBetween: 14,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 24,
+            spaceBetween: 16,
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 24,
+            spaceBetween: 12,
           },
         },
       });
