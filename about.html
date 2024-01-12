@@ -946,6 +946,10 @@ gap: 8px;
 border-radius: 20px;
 background: #B6B6B6;
 margin-top: 25px;
+background-image: url("./about/About\ Us.JPG");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
 
 color: #FFF;
 
@@ -1110,6 +1114,10 @@ min-width: 140px;
 height: 150px;
 border-radius: 8px;
 }
+
+.half {
+  width: 50% !important;
+}
 .certification-title {
 color: rgba(0, 0, 0, 0.80);
 font-size: 24px;
@@ -1163,6 +1171,14 @@ align-self: stretch;
 border-radius: 20px;
 background: #B6B6B6;
 min-width: 280px;
+background-image: url("./medical-team.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.career-image-placeholder img {
+  border-radius: 20px;
 }
 .career-title {
 color: rgba(0, 0, 0, 0.80);
@@ -1199,7 +1215,7 @@ align-self: stretch;
     <nav class="custom-navbar navbar navbar-expand-lg sticky-top px-3 py-2">
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="/about.html">
+        <a class="navbar-brand" href="/">
           <img src="./logo.png" alt="Logo" class="logo mr-3" />
         </a>
         <!-- Toggler button for mobile -->
@@ -1222,7 +1238,7 @@ align-self: stretch;
           </ul>
           <!-- Log In and Sign Up -->
           <div class="form-inline my-2 my-lg-0">
-            <div class="btn-group">
+            <div class="btn-group half">
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle mr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</button>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="https://emp.aspmedic.com" target="_blank">Employee</a>
@@ -1232,7 +1248,7 @@ align-self: stretch;
               </div>
             </div>
             <!-- Sign Up Dropdown Button -->
-            <div class="btn-group">
+            <div class="btn-group half">
               <button type="button" class="btn btn-primary dropdown-toggle signup-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign Up
               </button>
@@ -1251,7 +1267,7 @@ align-self: stretch;
         <div class="container">
         
               <div class="col-12 team-picture-placeholder">
-                <img src="/about/About Us.JPG" width="100%" height="100%" />
+                <!-- <img src="/about/About Us.JPG" width="100%" height="100%" /> -->
                 <!-- Team Picture or an image representative of the company culture -->
               </div>
        
@@ -1429,7 +1445,8 @@ align-self: stretch;
   <div class="career-section">
     <div class="container">
           <div class="career-card">
-            <div class="career-image-placeholder"></div>
+            <div class="career-image-placeholder">
+            </div>
             <div class="career-box">
             <div class="career-title">Careers</div>
             <div class="career-description">ASP Medical Group provides employees with advancement opportunities, a solid business track record, team-oriented leaders, attractive benefits, and development chances. </br></br>
