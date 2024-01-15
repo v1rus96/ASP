@@ -149,18 +149,53 @@
   top: 8px;
 }
 
-.nav-link {
+.custom-navbar .nav-link {
   color: #151515;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
+
+text-align: center;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+  position: relative;
+  display: inline-block;
 }
 
-.nav-item.active .nav-link,
-.nav-link:hover {
-  border-bottom: 1px solid #a9b7be;
+.custom-navbar .nav-item {
+  /* width: 78px; */
+height: 22px;
+padding: 0px 8px;
+}
+.custom-navbar .nav-link:after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  height: 2px;
+  background: #294A5D;
+  transition: all 0.2s linear;
+  width: 0;
+  bottom: -3px;
+}
+.custom-navbar .nav-link:hover:after {
+  width: 100%;
+  left: 0px;
+  
 }
 
+.custom-navbar .nav-link:hover {
+  color: #294A5D;
+font-weight: 700;
+transition: all 0.2s linear;
+}
+
+.custom-navbar a.nav-link {
+  padding: 0;
+  width: 90px;
+}
+
+.custom-navbar ul.navbar-nav.mr-auto {
+  gap: 16px;
+}
 .signup-button {
   background: #4b97b8;
   border-radius: 8px;
@@ -217,6 +252,20 @@
 
   .navbar-nav {
     flex-direction: column;
+  }
+
+  .custom-navbar ul.navbar-nav.mr-auto {
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 32px;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 32px;
+  }
+
+  .custom-navbar a.nav-link {
+    width: 100%;
   }
 
   .form-inline {
@@ -822,6 +871,22 @@ background: #EFEFEF;
 
       /* Responsive adjustments for mobile devices */
      @media screen and (max-width: 768px) {
+
+      .awards-section .row {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+
+  .awards-section .col-md-6 {
+    flex: 0 0 auto; /* Adjust this to make each card fully visible */
+  }
+
+  .award-card {
+    flex: 0 0 auto; /* Adjust this based on the width of each card */
+    margin-right: 16px; /* Add some space between cards */
+  }
+
     .shift {
         position: relative;
         right: 0;
@@ -932,10 +997,28 @@ background: #EFEFEF;
 
       .copyright-links {
         display: flex;
-justify-content: center;
-align-items: center;
-gap: 16px;
+        gap: 24px;
       }
+
+      .copyright-links a {
+        color: #222222;
+      }
+
+
+      .email-link {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 72px;
+        text-decoration-line: underline;
+      }
+
+      .address-box {
+    display: flex;
+align-items: flex-start;
+/* gap: 16px; */
+align-self: stretch;
+}
 
       .team-picture-placeholder {
         display: flex;
@@ -993,7 +1076,18 @@ border-bottom: 1px solid grey;
     }
 
     .copyright {
-        padding: 15px;
+      /* font-size: 10px; */
+      padding: 15px 20px !important;
+    }
+
+    .copyright-links {
+      flex-wrap: wrap;
+      gap: 0 !important;
+    }
+
+    .gaps2 {
+      gap: 30px;
+      font-size: 10px !important;
     }
 
 
@@ -1111,7 +1205,7 @@ flex-direction: column;
 gap: 16px;
 }
 .certification-image-placeholder {
-background-color: #c0c0c0;
+background-color: white;
 min-width: 140px;
 height: 150px;
 border-radius: 8px;
@@ -1199,12 +1293,6 @@ line-height: normal;
 align-self: stretch;
 }
 
-.address-box {
-    display: flex;
-align-items: flex-start;
-gap: 16px;
-align-self: stretch;
-}
 
 .footer-title {
         color: #294A5D;
@@ -1295,7 +1383,7 @@ align-self: stretch;
                 <p class="card-info">
                     To become the largest health care company in Malaysia and South East Asia.
                 </p>
-                <img src="./light.png" alt="Database Icon" class="icon-image" />
+                <img src="./light.svg" alt="Database Icon" class="icon-image" />
               </div>
             </div>
           </div>
@@ -1306,7 +1394,7 @@ align-self: stretch;
                 <p class="card-info">
                     To give our best services to our clients and patients.
                 </p>
-                <img src="./goal.png" alt="Globe Icon" class="icon-image" />
+                <img src="./goal.svg" alt="Globe Icon" class="icon-image" />
               </div>
             </div>
           </div>
@@ -1317,7 +1405,7 @@ align-self: stretch;
                 <p class="card-info">
                     Commitment, Act Fast, Deliver Promise and No Excuse.
                 </p>
-                <img src="./flag.png" alt="Trophy Icon" class="icon-image" />
+                <img src="./flag.svg" alt="Trophy Icon" class="icon-image" />
               </div>
             </div>
           </div>
@@ -1419,7 +1507,7 @@ align-self: stretch;
         <div class="col-md-6">
           <div class="certification-card">
             <div class="certification-image-placeholder">
-                <img src="c1.png" width="100%" height="100%"/>
+                <img src="c1.png"  height="100%"/>
             </div>
             <div class="certification-box">
             <div class="certification-title">Competitive Prices</div>
@@ -1430,7 +1518,7 @@ align-self: stretch;
         <div class="col-md-6">
           <div class="certification-card">
             <div class="certification-image-placeholder">
-                <img src="c2.png" width="100%" height="100%"/>
+                <img src="c2.png"  height="100%"/>
             </div>
             <div class="certification-box">
             <div class="certification-title">Quality Products & Services</div>
@@ -1459,6 +1547,7 @@ align-self: stretch;
                 <div class="career-description"><b>ASP Medical Clinic Sdn. Bhd.</b></br>
                     Unit 13.2 (Tingkat 13), Wisma Lee Rubber,</br>
                     No.1, Jalan Melaka, 50100, Kuala Lumpur</div>
+                    <p>Email : <a style="color: #6794B8;" href="mailto:Enquiry@aspmedic.com" class="email-link">hr@aspmedic.com</a></p>
 
           </div>
           
@@ -1499,7 +1588,7 @@ align-self: stretch;
               <div class="col-12">
                 <p>
                   For general enquiries, please send your queries to
-                  <a href="mailto:Enquiry@aspmedic.com">Enquiry@aspmedic.com</a>
+                  <a href="mailto:Enquiry@aspmedic.com" class="email-link">Enquiry@aspmedic.com</a>
                 </p>
               </div>
             </div>
@@ -1514,8 +1603,9 @@ align-self: stretch;
             <h5 class="footer-title">Kuala Lumpur Office</h5>
             <p> <img src="phone.svg"/> +603 - 2022677</p>
             <div class="address-box">
+              <img src="pin.svg"/>
             <p>
-                <img src="pin.svg"/>  Unit 13.2 (Tingkat 13),
+                 Unit 13.2 (Tingkat 13),
               Wisma Lee Rubber, No. 1, Jalan Melaka, 50100 Kuala Lumpur, Wilayah
               Persekutuan
             </p>
@@ -1523,23 +1613,24 @@ align-self: stretch;
             </div>
             <!-- Insert map image or embed here -->
             <iframe
-  width="100%"
-  height="108"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-</iframe>
+    width="100%"
+    height="108"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group,+Jalan+Paya+Terubung,+Bayan+Lepas,+Penang,+Malaysia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+    </iframe>
           </div>
-
+    
           <!-- Penang Office -->
           <div class="col-md-6">
             <h5 class="footer-title">Penang Office</h5>
             <p> <img src="phone.svg"/> +604 - 2916765</p>
             <div class="address-box">
+              <img src="pin.svg"/> 
                 <p>
-                    <img src="pin.svg"/> No.3, R-02-09, Setia
+                   No.3, R-02-09, Setia
                   Triangle Tower Shop Office, Persiaran Kelicap, 11900 Bayan Lepas,
                   Penang.
                 </p>
@@ -1549,12 +1640,12 @@ align-self: stretch;
             <iframe
         width="100%"
             height="108"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-</iframe>
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),+Persiaran+Kelicap,+Bayan+Lepas,+Penang,+Malaysia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+    </iframe>
           </div>
         </div>
         <!-- Copyright and Links -->
@@ -1562,11 +1653,11 @@ align-self: stretch;
       </div>
       <div class="copyright">
         <div class="row">
-          <div class="col-md-12 d-flex justify-content-between align-items-center">
+          <div class="col-md-12 d-flex justify-content-between align-items-center gaps2">
             <p class="mb-0">Copyright © ASP Medical Clinic Sdn. Bhd. All Rights Reserved</p>
             <div class="copyright-links">
-                <a href="https://aspmedic.com/pdpa.html" class="text-decoration-none">Personal Data Protection Policy</a> |
-                <a href="https://aspmedic.com/appstnc.html" class="text-decoration-none">ASP Healthcare Apps Terms & Conditions</a>
+              <a href="https://aspmedic.com/pdpa.html" class="text-decoration-none">Personal Data Protection Policy</a> |
+              <a href="https://aspmedic.com/appstnc.html" class="text-decoration-none">ASP Healthcare Apps Terms & Conditions</a>
             </div>
           </div>
         </div>
