@@ -175,7 +175,6 @@ padding: 0px 8px;
 .custom-navbar .nav-link:hover:after {
   width: 100%;
   left: 0px;
-  
 }
 
 .custom-navbar .nav-link:hover {
@@ -376,6 +375,10 @@ transition: all 0.2s linear;
         margin: 0 10px; /* Space between logos */
         opacity: 0.5; /* Logos less prominent */
         transition: opacity 0.3s ease-in-out;
+      }
+
+      .font-nunum {
+        font-family: "Nanum Myeongjo", serif;
       }
 
       .hero-logos img:hover {
@@ -580,9 +583,18 @@ margin-top: -20px;
       .request-demo-section form {
         background-color: #fff; /* Form background */
         padding: 3rem 10rem;
-        border-radius: 8px; /* Match to your image's form style */
+        border-radius: 16px; /* Match to your image's form style */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        margin: 0 5rem;
+        margin: auto;
+        font-size: 14px !important;
+        font-weight: 300 !important;
+        height: 473px;
+        width: 886px;
+      }
+
+      .request-demo-section .form-control {
+        font-size: 14px !important;
+        font-weight: 300 !important;
       }
 
       .request-demo-section .form-control {
@@ -673,9 +685,21 @@ margin-top: -20px;
         justify-content: center;
       }
 
-      .services-section .card:hover {
-        border-bottom: 1px solid white;
-      }
+
+      .services-section .card:after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  height: 2px;
+  background: white;
+  transition: all 0.2s linear;
+  width: 0;
+  bottom: -3px;
+}
+.services-section .card:hover:after {
+  width: 100%;
+  left: 0px;
+}
 
       .news .swiper-slide .card {
         height: 480px;
@@ -958,6 +982,11 @@ margin-top: -20px;
         padding-top: 50px;
     }
 
+    .request-demo-section form {
+      height: auto;
+      width: auto;
+    }
+
     .test::before, .test-2::before {
       content: "Clients’ Feedbacks";
         font-size: 32px;
@@ -1076,7 +1105,11 @@ margin-top: -20px;
     justify-content: space-between;
     align-content: center;
   }
-  
+
+  body.service-modal {
+  overflow: hidden !important;
+}
+
 
 
 
@@ -1108,6 +1141,14 @@ iframe {
         display: block;
       }
 
+      .company-note {
+        color: rgba(0, 0, 0, 0.60);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
       /* Style for your buttons */
       .btn-next,
       .btn-submit-another {
@@ -1117,7 +1158,12 @@ iframe {
         padding: 12px;
         color: #ffffff;
         border-radius: 8px;
+        font-size: 14px;
+        font-weight: 300;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .btn-next:hover,
@@ -1126,8 +1172,16 @@ iframe {
         color: #ffffff;
       }
 
+      .btn-submit-another {
+        background-color: #4B97B8;
+      }
+
+      .btn-submit-another:hover {
+        background-color: #3A7792;
+      }
+
       .service-modal .modal-dialog {
-        max-width: 650px;
+        max-width: 720px;
       }
 
       .modal-content {
@@ -1184,6 +1238,9 @@ iframe {
         background-image: url('/servicesnew/Telemedicine\ Services.jpg');
       }
 
+      .service-modal {
+  overflow: hidden !important;
+}
 
       .modal-body {
     max-height: 720px; /* Adjust the height as needed */
@@ -1236,8 +1293,8 @@ line-height: 24px; /* 171.429% */
 .modal-dialog {
     max-height: 720px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column;
+    justify-content: center; */
 }
 
 
@@ -1263,11 +1320,60 @@ line-height: 24px; /* 171.429% */
         cursor: pointer;
       }
 
+      form#demoRequestForm {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+      }
+
+      div#stepConfirmation {
+        margin: auto;
+      }
+
+      .nav-tabs {
+        width: 100%;
+        align-self: flex-start !important;
+      }
+
+      div#stepBasicInfo {
+        width: 100%;
+      }
+
+
+
       /* Styles for confirmation message */
       .confirmation-message p {
         font-size: 1.25rem;
         text-align: center;
         margin: 20px 0;
+      }
+
+      .confirmation-message {
+        text-align: center;
+      }
+
+      .confirmation-message .c-icon {
+        border: 2px solid #ADB96F;
+    border-radius: 100px;
+    text-align: center;
+      }
+
+      .confirmation-message .c-title {
+        color: rgba(0, 0, 0, 0.87);
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700 ;
+        line-height: 24px; 
+      }
+
+      .confirmation-message .c-sub {
+        color: rgba(0, 0, 0, 0.87);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
       }
 
       .nav-tabs {
@@ -1286,7 +1392,7 @@ line-height: 24px; /* 171.429% */
       }
 
       .nav-item h3 {
-        font-size: 16px;
+        font-size: 14px;
         color: #a9b7be;
         font-weight: 400;
         margin: 0;
@@ -1324,7 +1430,7 @@ line-height: 24px; /* 171.429% */
 
 
       .email-link {
-        color: #000;
+        color: #294A5D;
         font-size: 16px;
         font-style: normal;
         line-height: 72px;
@@ -1903,12 +2009,12 @@ align-self: stretch;
     <!-- Request for Demo Section -->
     <section class="request-demo-section py-5" id="demoSection">
       <div class="container">
-        <h2 class="text-center mb-4 section-title">Request for Demo</h2>
-        <p class="text-center mb-5">
+        <h2 class="text-center mb-4 section-title" style="margin-bottom: 8px !important;">Request for Demo</h2>
+        <p class="text-center mb-5" style="font-weight: 300;">
           We'll be in touch to arrange a demo that suits your schedule.
         </p>
-        <form id="demoRequestForm" target="_blank" action="https://formsubmit.co/formsubmit@aspmedic.com" method="POST">
-          <div class="nav-tabs">
+        <form id="demoRequestForm" action="https://formsubmit.co/formsubmit@aspmedic.com" method="POST" target="_blank">
+          <div class="nav-tabs" id="nav-tab">
             <div class="nav-item active" data-target="#basicInfo" id="navBasicInfo">
               <h3>Basic Info</h3>
             </div>
@@ -2067,16 +2173,18 @@ align-self: stretch;
             
               </div>
             </div>
+            <p class="company-note">Note: This form is for demo requests only, please use the live chat for support inquiries.</p>
             <!-- Other fields as per your second image -->
             <div class="form-row center mt-4">
-            <button type="submit" class="btn btn-next">Submit</button>
+            <button type="submit" class="btn btn-next btn-submit">Submit</button>
           </div>
           </div>
           <!-- Confirmation Step -->
           <div class="form-step" id="stepConfirmation">
             <div class="confirmation-message">
-              <p>Your request has been submitted successfully!</p>
-              <p>
+              <img src="check-circle.svg" class="c-icon"/>
+              <p class="c-title">Your request has been submitted successfully!</p>
+              <p class="c-sub">
                 We will contact you within 3-5 working days to arrange a demo.
               </p>
             </div>
@@ -2099,7 +2207,7 @@ align-self: stretch;
         <h5 class="footer-title">Call Centre / Helpdesk</h5>
         <div class="row">
           <div class="col-md-3 col-sm-6">
-            <p>  <img src="phone.svg"/> +604 - 2020909</p>
+            <p>  <img src="phone.svg"/>+604 - 2020909</p>
           </div>
           <div class="col-md-3 col-sm-6">
             <p>
@@ -2112,20 +2220,22 @@ align-self: stretch;
         </div>
         <div class="row">
           <div class="col-md-3 col-sm-6">
-            <p>  <img src="wa.svg"/> +6016 - 4123488</p>
+            <p>  <img src="wa.svg"/>+6016 - 4123488</p>
           </div>
           <div class="col-md-3 col-sm-6">
             <p>   <img src="skype.svg"/> ASP PGHELPDESK</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <p>
+        <div class="row" style="margin-bottom: 24px;">
+          <div class="col-12 font-nunum ">
+            <p style="margin: 0; padding: 0; height: 40px;">
               Do reach out to us on 
-              <a href="mailto:Enquiry@aspmedic.com" class="email-link">Helpdesk@aspmedic.com</a></br>
-              For general enquiries, please send your queries to
-              <a href="mailto:Enquiry@aspmedic.com" class="email-link">Enquiry@aspmedic.com</a>
+              <a href="mailto:Enquiry@aspmedic.com" class="email-link">Helpdesk@aspmedic.com</a>
             </p>
+            <p style="margin: 0; padding: 0; height: 40px;">
+            For general enquiries, please send your queries to
+            <a href="mailto:Enquiry@aspmedic.com" class="email-link">Enquiry@aspmedic.com</a>
+          </p>
           </div>
         </div>
       </div>
@@ -2137,7 +2247,7 @@ align-self: stretch;
       <!-- Kuala Lumpur Office -->
       <div class="col-md-6">
         <h5 class="footer-title">Kuala Lumpur Office</h5>
-        <p> <img src="phone.svg"/> +603 - 2022677</p>
+        <p> <img src="phone.svg"/>+603 - 2022677</p>
         <div class="address-box">
           <img src="pin.svg"/>
         <p>
@@ -2162,7 +2272,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group,+Jalan+Melak
       <!-- Penang Office -->
       <div class="col-md-6">
         <h5 class="footer-title">Penang Office</h5>
-        <p> <img src="phone.svg"/> +604 - 2916765</p>
+        <p> <img src="phone.svg"/>+604 - 2916765</p>
         <div class="address-box">
           <img src="pin.svg"/> 
             <p>
@@ -2257,8 +2367,22 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
          <li> Nationwide Clinic Network: Access to GP/Dental Clinics nationwide.</li>
 <li>Cashless Treatment Processing: Utilization of EDC Terminals and ASP web-based systems for real-time claims validation at clinics.</li>
 <li>Fraud Detection & Review: Expert review of medical bills to detect false claims and identify misuse by employees/dependents.</li>
-<li>Swift Data Management: Rapid updating of employee/dependent data in ASP's Server e.g. activation, termination, changes to cost centre & eligibility within 1 working </li>
+<li>Swift Data Management: Rapid updating of employee/dependent data in ASP's Server e.g. activation, termination, changes to cost centre & eligibility within 1 working 1 working day of receipt of such information.</li>
         </ul>
+        <p>Key Features:</p>
+        <ul>
+  <li>Outpatient Specialist GL Issuance:We issue GL for Out Patient Specialist's visit.</li>
+  <li>Claims Handling: Handling non-panel clinic reimbursement claims and specialist claims.</li>
+  <li>Efficient Card Delivery: Dispatch of ASP Medical cards within 7 working days.</li>
+  <li>Online Access: HR Personnel access for Statistics/Reports; Employee access for benefits checking.</li>
+</ul>
+
+  <p>Additional Services:</p>
+  <ul>
+  <li>Custom Reporting: Tailored ad-hoc reports requested by Employer within a time frame that is acceptable by both parties.</li>
+  <li>Data Integration: Monthly data downloads for Employer's Finance System.</li>
+  <li>24/7 Call Centre Support: Round-the-clock assistance available.</li>
+</ul>
        </div>
         <div class="alert alert-primary modal-alert d-flex justify-content-between align-items-center" role="alert">
           Interested and would like to find out more?
@@ -2328,6 +2452,19 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         <div class="modal-text-content mb-4">
         <p>Malaysia is taking great steps to be an industrialized nation by the year 2020. This will entail heavy and extensive use of chemicals. The purpose of medical surveillance is for the early identification of conditions, if any, that could present an increased risk of adverse health effects related to the task being performed.</p>
         <p>      Based on the type of work being performed, including consideration of factors such as the duration of the task, the materials being used, and the potential for exposure, medical surveillance is either recommended or required for the job.</p>
+        <p>Specific test results and other personal medical information generated by these exams will be kept confidential between the employee and the physician. The physician will determine the scope of the exam, then inform the supervisor of their recommendations based on the exam results. The supervisor will discuss these recommendations, if any, with the employee. The employee can contact the physician who performs the exam with any questions regarding the test results.</p>
+
+        <p>The components of Medical Surveillance Programme include:</p>
+          <ul>
+        <li>Pre-employment and pre-placement medical examination.</li>
+        <li>Biological monitoring and biological effect monitoring.</li>
+        <li>Health effects monitoring.</li>
+        <li>Investigation of occupational disease and poisoning including workplace inspections.</li>
+        <li>Notification of occupational disease and poisoning.</li>
+        <li>Assist in disability assessment.</li>
+        <li>Return to work examination after medical removal protection.</li>
+        <li>Record keeping and monitoring.</li>
+      </ul>
        </div>
         <div class="alert alert-primary modal-alert d-flex justify-content-between align-items-center" role="alert">
           Interested and would like to find out more?
@@ -2359,7 +2496,16 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         <div class="modal-body-image simg5 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>We conducts corporate health screenings or blood test for thousands of employees nationwide. Health screening is made easy with our on-site health screening wellness team deployed right at your office. Some of the available screenings include blood screening, cholesterol screenings, blood glucose measurements, blood pressure measurements and body fat analysis. The important of health screening result provide current and potential medical illness can be a key to the early detection of chronic illnesses.</p>
-        <p>With a series of screening tests, we provide trending on your year-to-year corporation's </p>
+        <p>With a series of screening tests, we provide trending on your year-to-year corporation's health profile and you will have a better insight on your employees' health. Following health screening, our extensive range of wellness programmes is carefully crafted to empower your organization to achieve a healthier lifestyle.</p>
+<p>ASP Wellness Programme is a programme that provides continually to improve or maintain the health of the employees. The approach is holistic, and includes education, training and sustaining a workplace environment that promotes well-being which developing high performance teams and creating a supportive environment at the workplace.</p>
+
+<p>The following are recommended guidelines for wellness programmes:</p>
+<ul>
+<li>Weight Management Programme</li>
+<li>Chronic Disease Management Programme</li>
+<li>Fit-To-Lead Programme</li>
+<li>Smoking Cessation Programme</li>
+</ul>
        </div>
         <div class="alert alert-primary modal-alert d-flex justify-content-between align-items-center" role="alert">
           Interested and would like to find out more?
@@ -2500,6 +2646,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
 function toggleIcon(element) {
   document.querySelector('.navbar-toggler-icon').classList.toggle('open');
 }
@@ -2510,7 +2658,9 @@ function toggleIcon(element) {
       document.addEventListener("DOMContentLoaded", () => {
   const steps = Array.from(document.querySelectorAll(".form-step"));
   const nextBtns = Array.from(document.querySelectorAll(".btn-next"));
+  const submitBtn = document.querySelector(".btn-submit")
   const form = document.getElementById("demoRequestForm");
+  var navTabs = document.getElementById("nav-tab");
   let currentStep = 0;
 
   function showStep(step) {
@@ -2539,8 +2689,13 @@ function toggleIcon(element) {
     });
   });
 
+  document.querySelector(".btn-submit").addEventListener("click", () => {
+    navTabs.style.display = "none"
+  })
+
   document.querySelector(".btn-submit-another").addEventListener("click", () => {
     form.style.display = "block";
+    navTabs.style.display = "flex"
     currentStep = 0;
     showStep(currentStep);
     form.reset();
