@@ -30,6 +30,14 @@
         /* overflow-x: hidden; */
       }
 
+      .m-0 {
+        margin: 0;
+      }
+
+      .p-6 {
+        padding: 6px;
+      }
+
       html {
         scroll-behavior: smooth;
       }
@@ -858,6 +866,18 @@ background: #EFEFEF;
         transition: all 1s ease;
       }
 
+/* Style for the container */
+.award-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap in the container */
+  gap: 10px; /* Adjust as needed for spacing between cards */
+}
+
+/* Style for each card - Adjust width as needed */
+.award-card {
+  flex: 1 1 calc(50% - 10px); /* Sets the basis for two columns */
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+}
       /* Existing CSS styles here... */
       @keyframes marquee {
     0% { transform: translateX(100%); }
@@ -874,7 +894,7 @@ background: #EFEFEF;
 
       .awards-section .row {
     display: flex;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     padding-bottom: 20px;
   }
 
@@ -885,6 +905,18 @@ background: #EFEFEF;
   .award-card {
     flex: 0 0 auto; /* Adjust this based on the width of each card */
     margin-right: 16px; /* Add some space between cards */
+  }
+
+
+  .award-cards-container {
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .award-card {
+    flex: 0 0 auto; /* Prevents cards from stretching */
+    width: 80%; /* Adjust the width of cards on mobile */
   }
 
     .shift {
@@ -1090,6 +1122,10 @@ border-bottom: 1px solid grey;
       font-size: 10px !important;
     }
 
+    .award-card {
+      width: 100% !important;
+    }
+
 
 }
 .content-box h2 {
@@ -1131,7 +1167,7 @@ line-height: 72px; /* 150% */
 padding: 24px 32px 24px 24px;
 align-items: center;
 gap: 32px;
-flex: 1 0 0;
+/* flex: 1 0 0; */
 border-radius: 20px;
 background: #294A5D;
 width: 552px;
@@ -1423,71 +1459,67 @@ align-self: stretch;
             </div>
           </div>
           <div class="row mt-4">
-            <!-- Left Column -->
-            <div class="col-md-6">
-              <!-- Award Card 1 -->
-              <div class="award-card mb-4">
-                <div class="award-image-placeholder">
-                    <img src="awards/mip.jpg" alt="In House Clinic Management" width="140" height="160"/>
-                </div>
-                <div class="award-box">
-                  <div class="award-title">Most Influential People of OSH Winner in Malaysia 2021 Dato’ Dr Tan Meng Lee (CEO, ASP)</div>
-                  <div class="award-description"></div>
-                </div>
+            <div class="award-cards-container">
+             <!-- Award Card 1 -->
+             <div class="award-card mb-4">
+              <div class="award-image-placeholder">
+                  <img src="awards/mip.jpg" alt="In House Clinic Management" width="140" height="160"/>
               </div>
-              <!-- Award Card 2 -->
-              <div class="award-card mb-4">
-                <div class="award-image-placeholder">
-                    <img src="awards/Megaklinik Zahran.jpg" alt="In House Clinic Management" width="140" height="160"/>
-                </div>
-                <div class="award-box">
-                  <div class="award-title">Mengaklinik Zahran Haari Penghargaan Korporat Anugerah Perkhidmatan Terbaik (TPA)</div>
-                  <div class="award-description"></div>
-                </div>
-              </div>
-              <!-- Award Card 3 -->
-              <div class="award-card mb-4">
-                <div class="award-image-placeholder">
-                    <img src="awards/APEA 2019.jpg" alt="In House Clinic Management" width="140" height="160"/>
-                </div>
-                <div class="award-box">
-                  <div class="award-title">APEA 2019</div>
-                  <div class="award-description">Outstanding Category Healthcare, Pharmaceutical, biotechnology industry</div>
-                </div>
+              <div class="award-box">
+                <div class="award-title">Most Influential People of OSH Winner in Malaysia 2021 Dato’ Dr Tan Meng Lee (CEO, ASP)</div>
+                <div class="award-description"></div>
               </div>
             </div>
-            <!-- Right Column -->
-            <div class="col-md-6">
-              <!-- Award Card 4 -->
-              <div class="award-card mb-4">
-                <div class="award-image-placeholder">
-                    <img src="awards/HR Vendors 2018.jpg" alt="In House Clinic Management" width="140" height="160"/>
-                </div>
-                <div class="award-box">
-                  <div class="award-title">HR Vendors 2018</div>
-                  <div class="award-description">Best Corporate Wellness Provider</div>
-                </div>
+            <!-- Award Card 2 -->
+            <div class="award-card mb-4">
+              <div class="award-image-placeholder">
+                  <img src="awards/Megaklinik Zahran.jpg" alt="In House Clinic Management" width="140" height="160"/>
               </div>
-              <!-- Award Card 5 -->
-              <div class="award-card mb-4">
-                <div class="award-image-placeholder">
-                    <img src="awards/Lang International.jpg" alt="In House Clinic Management" width="140" height="160"/>
-                </div>
-                <div class="award-box">
-                  <div class="award-title">Lang International Corporate Titan Awards 2019</div>
-                  <div class="award-description">Life Achievement in Medical Field</div>
-                </div>
+              <div class="award-box">
+                <div class="award-title">Mengaklinik Zahran Haari Penghargaan Korporat Anugerah Perkhidmatan Terbaik (TPA)</div>
+                <div class="award-description"></div>
               </div>
-              <!-- Award Card 6 -->
-              <div class="award-card mb-4">
-                <div class="award-image-placeholder">
-                    <img src="awards/National Covid 19.jpg" alt="In House Clinic Management" width="140" height="160"/>
-                </div>
-                <div class="award-box">
-                  <div class="award-title">National Covid-19 Immunisation Programme 2021</div>
-                  <div class="award-description">Public-Private Partnership</div>
-                </div>
+            </div>
+            <!-- Award Card 3 -->
+            <div class="award-card mb-4">
+              <div class="award-image-placeholder">
+                  <img src="awards/APEA 2019.jpg" alt="In House Clinic Management" width="140" height="160"/>
               </div>
+              <div class="award-box">
+                <div class="award-title">APEA 2019</div>
+                <div class="award-description">Outstanding Category Healthcare, Pharmaceutical, biotechnology industry</div>
+              </div>
+            </div>
+            <!-- Award Card 4 -->
+            <div class="award-card mb-4">
+              <div class="award-image-placeholder">
+                  <img src="awards/HR Vendors 2018.jpg" alt="In House Clinic Management" width="140" height="160"/>
+              </div>
+              <div class="award-box">
+                <div class="award-title">HR Vendors 2018</div>
+                <div class="award-description">Best Corporate Wellness Provider</div>
+              </div>
+            </div>
+            <!-- Award Card 5 -->
+            <div class="award-card mb-4">
+              <div class="award-image-placeholder">
+                  <img src="awards/Lang International.jpg" alt="In House Clinic Management" width="140" height="160"/>
+              </div>
+              <div class="award-box">
+                <div class="award-title">Lang International Corporate Titan Awards 2019</div>
+                <div class="award-description">Life Achievement in Medical Field</div>
+              </div>
+            </div>
+            <!-- Award Card 6 -->
+            <div class="award-card mb-4">
+              <div class="award-image-placeholder">
+                  <img src="awards/National Covid 19.jpg" alt="In House Clinic Management" width="140" height="160"/>
+              </div>
+              <div class="award-box">
+                <div class="award-title">National Covid-19 Immunisation Programme 2021</div>
+                <div class="award-description">Public-Private Partnership</div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
