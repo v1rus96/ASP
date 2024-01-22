@@ -592,7 +592,7 @@ margin-top: -20px;
         width: 886px;
       }
 
-      .request-demo-section .form-control {
+      .request-demo-section .form-control  {
         font-size: 14px !important;
         font-weight: 300 !important;
       }
@@ -604,6 +604,29 @@ margin-top: -20px;
         border: 1px;
         border: 1px solid #ebebeb;
       }
+
+      .request-demo-section .dropdown-toggle  {
+        font-size: 14px !important;
+        font-weight: 300 !important;
+      }
+
+      .request-demo-section .dropdown-toggle {
+        height: 38px;
+        padding: 8px, 16px, 8px, 16px;
+        border-radius: 8px;
+        border: none;
+        background: transparent;
+      }
+
+      .request-demo-section .form-select {
+        -webkit-appearance: none;
+      }
+
+      .bootstrap-select>.dropdown-toggle:after {
+        margin-top: 0;
+      }
+
+
 
       .request-demo-section .btn-demo {
         background-color: #88c057; /* Button color */
@@ -703,7 +726,7 @@ margin-top: -20px;
 
       .news .swiper-slide .card {
         height: 480px;
-        width: 338.76px;
+        min-width: 338.76px;
         background: none;
         border: none;
         border-radius: 8px;
@@ -719,7 +742,8 @@ margin-top: -20px;
       }
 
       .news .swiper-slide {
-        width: 338.76px;
+        min-width: 338.76px;
+        min-height: 480px;
       }
 
       .news .swiper {
@@ -910,7 +934,7 @@ margin-top: -20px;
       }
 
       select#department.form-control option[selected][disabled]  {
-          color: lightgrey !important;
+          color: #B5B8BD !important;
       }
 
       .news .swiper-button-next2::after {
@@ -941,7 +965,7 @@ margin-top: -20px;
       body, html {
         font-family: "Manrope", sans-serif;
         max-width: 100%;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
       }
     .shift {
         position: relative;
@@ -1338,6 +1362,14 @@ line-height: 24px; /* 171.429% */
 
       div#stepBasicInfo {
         width: 100%;
+      }
+
+      .filter-option {
+        font-size: 14px;
+      }
+
+      .bootstrap-select .dropdown-toggle .filter-option {
+        height: auto;
       }
 
 
@@ -1980,6 +2012,13 @@ align-self: stretch;
                     <img src="news/Post-covid.png" alt="In House Clinic Management" />
                   </div>
                 </div>
+   
+                <div class="swiper-slide">
+                 
+                  <div style="width: 300px;"></div>
+   
+                </div>
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -2074,7 +2113,7 @@ align-self: stretch;
                 <label for="department"
                   >Which department do you belong in?</label
                 >
-                <select id="department" name="department" class="form-control">
+                <select id="department" name="department" class="form-control selectpicker">
                   <option disabled selected>Choose...</option>
                   <option value="hr">Human Resources</option>
                   <option value="admin">Admin / Management</option>
@@ -2095,7 +2134,7 @@ align-self: stretch;
                 <label for="department"
                 >Which country is your company office located in? </label
               >
-              <select id="country" name="country" class="form-control">
+              <select id="country" name="country" class="form-control selectpicker">
                 <option disabled selected>Choose...</option>
                 <option value="malaysia">Malaysia</option>
                 <option value="singapore">Singapore</option>
@@ -2106,7 +2145,7 @@ align-self: stretch;
                 <label for="department"
                 >What is your company size in terms of number of employees?</label
               >
-              <select id="size" name="size" class="form-control">
+              <select id="size" name="size" class="form-control selectpicker">
                 <option disabled selected>Choose...</option>
                 <option value="50">1 ~ 50</option>
                 <option value="200">51 ~ 200</option>
@@ -2125,7 +2164,7 @@ align-self: stretch;
                 <label for="department"
                 >Which industry fits your company description?</label
               >
-              <select id="industry" name="industry" class="form-control">
+              <select id="industry" name="industry" class="form-control selectpicker">
                 <option disabled selected>Choose...</option>
                 <option value="aerospace">AEROSPACE</option>
                 <option value="architectural_services">ARCHITECTURAL SERVICES</option>
@@ -2154,7 +2193,7 @@ align-self: stretch;
                 <label for="department"
                 >What health benefits do you cover for your employees?</label
               >
-              <select id="benefits" name="benefits[]" class="form-control selectpicker" multiple>
+              <select id="benefits" name="benefits[]" class="form-control selectpicker" multiple title="Choose...">
                 <option value="gp">GP</option>
                 <option value="dental">Dental</option>
                 <option value="flexi_benefits">Flexi Benefits</option>
@@ -2751,6 +2790,8 @@ function toggleIcon(element) {
       var swiper = new Swiper(".mySwiper2", {
         slidesPerView: "auto",
         spaceBetween: 16,
+        // centeredSlides: true,
+
         navigation: {
           nextEl: ".swiper-button-next2",
           prevEl: ".swiper-button-prev2",
