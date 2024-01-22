@@ -432,6 +432,7 @@ transition: all 0.2s linear;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        gap: 8px;
       }
 
       .statistics-section .card-link {
@@ -482,7 +483,7 @@ margin-top: -20px;
       .statistics-section .card-info {
         color: #666666; /* Medium grey for the info text */
         font-size: 14px; /* Smaller font size for the info text */
-        margin-bottom: 24px;
+        /* margin-bottom: 24px; */
         font-weight: 300;
         text-align: start;
       }
@@ -490,7 +491,7 @@ margin-top: -20px;
       .statistics-section .icon-image {
         width: 85px; /* Adjust the size as needed */
         height: auto;
-        margin-top: 16px;
+        /* margin-top: 16px; */
         align-self: end; /* Center the icon horizontally */
       }
 
@@ -948,6 +949,8 @@ margin-top: -20px;
       }
 
 
+
+
       /* Existing CSS styles here... */
       @keyframes marquee {
     0% { transform: translateX(100%); }
@@ -984,6 +987,18 @@ margin-top: -20px;
         flex-direction: row; /* Keep it horizontal */
         animation: marquee2 30s linear infinite; /* Apply marquee animation */
     }
+
+    .m-0 {
+        margin: 0;
+      }
+
+      .p-6 {
+        padding: 6px;
+      }
+
+      .mb-4 {
+        margin-bottom: 0 !important;
+      }
 
     .copyright {
       /* font-size: 10px; */
@@ -1660,10 +1675,10 @@ align-self: stretch;
         </div>
 
         <div class="row">
-          <div class="col-lg-3 mb-4 d-flex half">
+          <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
             <div class="card flex-fill">
-              <div class="card-body">
-                <p class="card-text">Experience That Matters</p>
+              <div class="card-body m-0">
+                <p class="card-text m-0">Experience That Matters</p>
                 <p class="card-info">
                   Established leaders since 2002, delivering unparalleled healthcare solutions.
                 </p>
@@ -1671,10 +1686,10 @@ align-self: stretch;
               </div>
             </div>
           </div>
-          <div class="col-lg-3 mb-4 d-flex half">
+          <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
             <div class="card flex-fill">
-              <div class="card-body">
-                <p class="card-text">Trusted by Diverse Industries</p>
+              <div class="card-body m-0">
+                <p class="card-text m-0">Trusted by Diverse Industries</p>
                 <p class="card-info">
                   Our clientele spans various sectors, showcasing our adaptability and understanding of unique needs.
                 </p>
@@ -1682,10 +1697,10 @@ align-self: stretch;
               </div>
             </div>
           </div>
-          <div class="col-lg-3 mb-4 d-flex half">
+          <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
             <div class="card flex-fill">
-              <div class="card-body">
-                <p class="card-text">Recognized Excellence</p>
+              <div class="card-body m-0">
+                <p class="card-text m-0">Recognized Excellence</p>
                 <p class="card-info">
                   Featured on TV2, APEA Award winner - Acknowledged for
                   innovation.
@@ -1696,11 +1711,11 @@ align-self: stretch;
      
               </div>
             </div>
-            <div class="col-lg-3 mb-4 d-flex half">
+            <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
               <div class="card flex-fill">
                 <div class="card-body">
-                  <p class="card-text">Affordability Meets Quality</p>
-                  <p class="card-info">
+                  <p class="card-text m-0">Affordability Meets Quality</p>
+                  <p class="card-info m-0">
                     Enjoy premium services without the premium price.
                   </p>
                   <img src="./4.png" alt="Badge Icon" class="icon-image" />
