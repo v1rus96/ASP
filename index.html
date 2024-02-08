@@ -247,7 +247,10 @@ transition: all 0.2s linear;
   }
 
   .navbar-collapse {
-    margin-top: 20px;
+    background: white;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 20px;
     text-align: center;
   }
 
@@ -430,7 +433,7 @@ transition: all 0.2s linear;
       .statistics-section .card-body {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         height: 100%;
         gap: 8px;
       }
@@ -714,8 +717,8 @@ margin-top: -20px;
   position: absolute;
   left: 50%;
   content: '';
-  height: 2px;
-  background: white;
+  height: 1px;
+  background: #A9B7BE;
   transition: all 0.2s linear;
   width: 0;
   bottom: -3px;
@@ -979,6 +982,20 @@ margin-top: -20px;
         animation: marquee 30s linear infinite; /* Apply marquee animation */
     }
 
+    .statistics-section .card-body {
+      padding: 16px;
+    }
+
+    .shift .col {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .shift-2 .col {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
     .shift-2 {
         position: relative;
         right: 0;
@@ -993,7 +1010,7 @@ margin-top: -20px;
       }
 
       .p-6 {
-        padding: 6px;
+        padding: 4px;
       }
 
       .mb-4 {
@@ -1034,6 +1051,10 @@ margin-top: -20px;
         top: 0 !important;
     }
 
+    form#demoRequestForm {
+      height: 635px;
+    }
+
     .section-title-white {
       font-size: 32px;
     }
@@ -1044,7 +1065,7 @@ margin-top: -20px;
     }
 
     .request-demo-section form {
-      padding: 2rem;
+      padding: 24px 16px;
       margin: 0 1rem;
     }
 
@@ -1070,7 +1091,7 @@ margin-top: -20px;
 }
 
 .modal-text-content {
-  max-height: 150px !important;
+  max-height: 200px !important;
 }
 
 .space {
@@ -1088,6 +1109,7 @@ margin-top: -20px;
 
 .section-title {
   font-size: 32px;
+  line-height: 42px;
 }
 
 .statistics-section .card-number {
@@ -1112,6 +1134,10 @@ margin-top: -20px;
 .statistics-section .icon-image {
   width: 50px;
   height: 50px;
+  position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 8px;
 }
 
 .news .swiper {
@@ -1120,7 +1146,8 @@ margin-top: -20px;
 
   .ht {
     height: 50px;
-    justify-content: center !important;
+    justify-content: end !important;
+    padding-right: 25px;
   }
 
   .custom-navbar ul.navbar-nav.mr-auto {
@@ -1145,6 +1172,7 @@ margin-top: -20px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    flex-direction: row !important;
     justify-content: space-between;
     align-content: center;
   }
@@ -1236,6 +1264,7 @@ iframe {
       .modal-content {
         border: none;
         border-radius: 16px;
+        height: 100%;
       }
 
       .service-modal .modal-body img {
@@ -1335,12 +1364,12 @@ line-height: 24px; /* 171.429% */
 /* Style for the scrollable text content */
 .modal-text-content {
     overflow-y: auto;
-    max-height: 250px; /* Adjust the height as needed */
+    max-height: 197px; /* Adjust the height as needed */
 }
 
 /* Style the modal to have a maximum height */
 .modal-dialog {
-    max-height: 720px;
+    height: 720px;
     display: flex;
     /* flex-direction: column;
     justify-content: center; */
@@ -1441,7 +1470,7 @@ line-height: 24px;
 
       .nav-item {
         cursor: pointer;
-        flex-grow: 1;
+        flex: 1;
       }
 
       .spacer {
@@ -1688,7 +1717,7 @@ align-self: stretch;
           </div>
         </div>
 
-        <div class="row">
+        <div class="row m-0">
           <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
             <div class="card flex-fill">
               <div class="card-body m-0">
@@ -1696,8 +1725,8 @@ align-self: stretch;
                 <p class="card-info">
                   Established leaders since 2002, delivering unparalleled healthcare solutions.
                 </p>
-                <img src="./1.png" alt="Database Icon" class="icon-image" />
               </div>
+              <img src="./1.png" alt="Database Icon" class="icon-image" />
             </div>
           </div>
           <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
@@ -1707,8 +1736,9 @@ align-self: stretch;
                 <p class="card-info">
                   Our clientele spans various sectors, showcasing our adaptability and understanding of unique needs.
                 </p>
-                <img src="./2.png" alt="Globe Icon" class="icon-image" />
+               
               </div>
+              <img src="./2.png" alt="Globe Icon" class="icon-image" />
             </div>
           </div>
           <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
@@ -1720,9 +1750,9 @@ align-self: stretch;
                   innovation.
                 </p>
                 <a class="card-link" href="/about.html">Learn More →</a>
-                <img src="./3.png" alt="Trophy Icon" class="icon-image" />
+              
                 </div>
-     
+                <img src="./3.png" alt="Trophy Icon" class="icon-image" />
               </div>
             </div>
             <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
@@ -1732,8 +1762,9 @@ align-self: stretch;
                   <p class="card-info m-0">
                     Enjoy premium services without the premium price.
                   </p>
-                  <img src="./4.png" alt="Badge Icon" class="icon-image" />
+                  
                 </div>
+                <img src="./4.png" alt="Badge Icon" class="icon-image" />
               </div>
             </div>
           </div>
@@ -2042,11 +2073,11 @@ align-self: stretch;
                   </div>
                 </div> -->
    
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                  
                   <div style="width: 300px;"></div>
    
-                </div>
+                </div> -->
 
               </div>
               <div class="swiper-pagination"></div>
@@ -2081,7 +2112,8 @@ align-self: stretch;
         <p class="text-center mb-5" style="font-weight: 300;">
           We'll be in touch to arrange a demo that suits your schedule.
         </p>
-        <form id="demoRequestForm" action="https://formsubmit.co/formsubmit@aspmedic.com" method="POST" target="_blank">
+        <iframe name="votar" style="display:none;"></iframe>
+        <form id="demoRequestForm" action="https://formsubmit.co/formsubmit@aspmedic.com" method="POST" target="votar" class="needs-validation" novalidate>
           <div class="nav-tabs" id="nav-tab">
             <div class="nav-item active" data-target="#basicInfo" id="navBasicInfo">
               <h3>Basic Info</h3>
@@ -2101,8 +2133,12 @@ align-self: stretch;
                   class="form-control"
                   id="firstName"
                   name="firstName"
+                  required="required"
                   placeholder="Enter your name"
                 />
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
               </div>
               <div class="form-group col-md-6">
                 <label for="workEmail">Work email</label>
@@ -2111,6 +2147,7 @@ align-self: stretch;
                   class="form-control"
                   id="workEmail"
                   name="workEmail"
+                  required="required"
                   placeholder="Enter your work email"
                 />
               </div>
@@ -2123,6 +2160,7 @@ align-self: stretch;
                   class="form-control"
                   id="contactNumber"
                   name="contactNumber"
+                  required="required"
                   placeholder="Enter your contact number"
                 />
               </div>
@@ -2133,6 +2171,7 @@ align-self: stretch;
                   class="form-control"
                   id="companyNumber"
                   name="companyNumber"
+                  required="required"
                   placeholder="Enter your company number"
                 />
               </div>
@@ -2142,7 +2181,7 @@ align-self: stretch;
                 <label for="department"
                   >Which department do you belong in?</label
                 >
-                <select id="department" name="department" class="form-control selectpicker">
+                <select id="department" name="department" class="form-control selectpicker" required="required">
                   <option disabled selected>Choose...</option>
                   <option value="hr">Human Resources</option>
                   <option value="admin">Admin / Management</option>
@@ -2163,7 +2202,7 @@ align-self: stretch;
                 <label for="department"
                 >Which country is your company office located in? </label
               >
-              <select id="country" name="country" class="form-control selectpicker">
+              <select id="country" name="country" class="form-control selectpicker" required="required">
                 <option disabled selected>Choose...</option>
                 <option value="malaysia">Malaysia</option>
                 <option value="singapore">Singapore</option>
@@ -2174,7 +2213,7 @@ align-self: stretch;
                 <label for="department"
                 >What is your company size in terms of number of employees?</label
               >
-              <select id="size" name="size" class="form-control selectpicker">
+              <select id="size" name="size" class="form-control selectpicker" required="required">
                 <option disabled selected>Choose...</option>
                 <option value="50">1 ~ 50</option>
                 <option value="200">51 ~ 200</option>
@@ -2193,7 +2232,7 @@ align-self: stretch;
                 <label for="department"
                 >Which industry fits your company description?</label
               >
-              <select id="industry" name="industry" class="form-control selectpicker">
+              <select id="industry" name="industry" class="form-control selectpicker" required="required">
                 <option disabled selected>Choose...</option>
                 <option value="aerospace">AEROSPACE</option>
                 <option value="architectural_services">ARCHITECTURAL SERVICES</option>
@@ -2222,7 +2261,7 @@ align-self: stretch;
                 <label for="department"
                 >What health benefits do you cover for your employees?</label
               >
-              <select id="benefits" name="benefits[]" class="form-control selectpicker" multiple title="Choose...">
+              <select id="benefits" name="benefits[]" class="form-control selectpicker" multiple title="Choose..." required="required">
                 <option value="gp">GP</option>
                 <option value="dental">Dental</option>
                 <option value="flexi_benefits">Flexi Benefits</option>
@@ -2745,12 +2784,33 @@ function toggleIcon(element) {
     }
   }
 
+  function validateCurrentStep() {
+    // Get all form elements for the current step
+    const currentStepFormElements = steps[currentStep].querySelectorAll("input, select, textarea");
+
+    // Temporarily set form to use Bootstrap validation classes
+    form.classList.add('was-validated');
+
+    // Check validity for each form element
+    let isCurrentStepValid = true;
+    currentStepFormElements.forEach(el => {
+      if (!el.checkValidity()) {
+        isCurrentStepValid = false;
+      }
+    });
+
+    // Remove validation class if moving to another step
+    form.classList.remove('was-validated');
+
+    return isCurrentStepValid;
+  }
+
   nextBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      if (index < steps.length - 1) {
+      if (validateCurrentStep() && index < steps.length - 1) {
         currentStep++;
         showStep(currentStep);
-      } else {
+      } else if (validateCurrentStep()) {
         form.style.display = "none";
         document.getElementById("stepConfirmation").style.display = "block";
       }
@@ -2796,6 +2856,7 @@ function toggleIcon(element) {
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         spaceBetween: 12,
+        allowTouchMove: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -2819,6 +2880,7 @@ function toggleIcon(element) {
       var swiper = new Swiper(".mySwiper2", {
         slidesPerView: "auto",
         spaceBetween: 16,
+        allowTouchMove: true,
         // centeredSlides: true,
 
         navigation: {
