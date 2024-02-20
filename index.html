@@ -177,6 +177,7 @@ padding: 0px 8px;
   width: 0;
   bottom: -3px;
 }
+
 .custom-navbar .nav-link:hover:after {
   width: 100%;
   left: 0px;
@@ -597,7 +598,7 @@ margin-top: -20px;
         margin: auto;
         font-size: 14px !important;
         font-weight: 300 !important;
-        height: 473px;
+        min-height: 473px;
         width: 886px;
       }
 
@@ -904,6 +905,10 @@ margin-top: -20px;
         left: 0;
       }
 
+      body.modal-open {
+    overflow: hidden;
+}
+
       .test-2 {
         display: flex;
         justify-content: center;
@@ -961,13 +966,13 @@ margin-top: -20px;
 
       /* Existing CSS styles here... */
       @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(50%); }
+    100% { transform: translateX(-40%); }
 }
 
 @keyframes marquee2 {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(40%); }
 }
 
       /* Responsive adjustments for mobile devices */
@@ -984,7 +989,7 @@ margin-top: -20px;
         left: 0;
         transition: none;
         flex-direction: row; /* Keep it horizontal */
-        animation: marquee 30s linear infinite; /* Apply marquee animation */
+        animation: marquee 10s linear infinite; /* Apply marquee animation */
     }
 
     .statistics-section .card-body {
@@ -1007,7 +1012,7 @@ margin-top: -20px;
         left: 0;
         transition: none;
         flex-direction: row; /* Keep it horizontal */
-        animation: marquee2 30s linear infinite; /* Apply marquee animation */
+        animation: marquee2 10s linear infinite; /* Apply marquee animation */
     }
 
     .m-0 {
@@ -2783,7 +2788,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+var myModal = document.getElementById('exampleModalCenter3');
 
+myModal.addEventListener('show.bs.modal', function () {
+  document.body.classList.add('modal-open');
+});
+
+myModal.addEventListener('hidden.bs.modal', function () {
+  document.body.classList.remove('modal-open');
+});
 
 
 function toggleIcon(element) {
