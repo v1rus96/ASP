@@ -26,6 +26,10 @@
 
       body {
         font-family: "Manrope", sans-serif;
+        /* overflow-x: hidden; */
+      }
+
+      section {
         overflow-x: hidden;
       }
 
@@ -114,6 +118,7 @@
 
   .form-inline .dropdown-menu {
     border-radius: 8px;
+    margin-top: 18px;
   }
 
   .form-inline .dropdown-item {
@@ -971,7 +976,7 @@ margin-top: -20px;
       body, html {
         font-family: "Manrope", sans-serif;
         max-width: 100%;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
       }
     .shift {
         position: relative;
@@ -1066,7 +1071,7 @@ margin-top: -20px;
 
     .request-demo-section form {
       padding: 24px 16px;
-      margin: 0 1rem;
+      /* margin: 0 1rem; */
     }
 
     .navbar-toggler-icon {
@@ -1264,7 +1269,7 @@ iframe {
       .modal-content {
         border: none;
         border-radius: 16px;
-        height: 100%;
+        height: 720px;
       }
 
       .service-modal .modal-body img {
@@ -1369,7 +1374,7 @@ line-height: 24px; /* 171.429% */
 
 /* Style the modal to have a maximum height */
 .modal-dialog {
-    height: 720px;
+    max-height: 720px;
     display: flex;
     /* flex-direction: column;
     justify-content: center; */
@@ -1546,6 +1551,9 @@ align-self: stretch;
         color: #878C69;
         background-color: rgba(222, 227, 197, 0.20);
         border: none;
+        /* position: absolute;
+        bottom: 0;
+        width: 95.5%; */
       }
 
       .footer-title {
@@ -2137,7 +2145,7 @@ align-self: stretch;
                   placeholder="Enter your name"
                 />
                 <div class="invalid-feedback">
-                  Please choose a username.
+                  Please fill in this required field.
                 </div>
               </div>
               <div class="form-group col-md-6">
@@ -2150,6 +2158,9 @@ align-self: stretch;
                   required="required"
                   placeholder="Enter your work email"
                 />
+                <div class="invalid-feedback">
+                  Please fill in this required field.
+                </div>
               </div>
             </div>
             <div class="form-row">
@@ -2163,6 +2174,9 @@ align-self: stretch;
                   required="required"
                   placeholder="Enter your contact number"
                 />
+                <div class="invalid-feedback">
+                  Please fill in this required field.
+                </div>
               </div>
               <div class="form-group col-md-6">
                 <label for="companyNumber">Company number</label>
@@ -2174,6 +2188,9 @@ align-self: stretch;
                   required="required"
                   placeholder="Enter your company number"
                 />
+                <div class="invalid-feedback">
+                  Please fill in this required field.
+                </div>
               </div>
             </div>
             <div class="form-row">
@@ -2189,6 +2206,9 @@ align-self: stretch;
                   <option value="other">Other</option>
                   <!-- Add other department options here -->
                 </select>
+                <div class="invalid-feedback">
+                  Please fill in this required field.
+                </div>
               </div>
             </div>
             <div class="form-row center mt-4">
@@ -2208,6 +2228,9 @@ align-self: stretch;
                 <option value="singapore">Singapore</option>
                 <!-- Add other department options here -->
               </select>
+              <div class="invalid-feedback">
+                Please fill in this required field.
+              </div>
               </div>
               <div class="form-group col-md-6">
                 <label for="department"
@@ -2225,6 +2248,9 @@ align-self: stretch;
 
                 <!-- Add other department options here -->
               </select>
+              <div class="invalid-feedback">
+                Please fill in this required field.
+              </div>
               </div>
             </div>
             <div class="form-row">
@@ -2255,6 +2281,9 @@ align-self: stretch;
                 <option value="printing_and_publishing_services">PRINTING & PUBLISHING SERVICES</option>
                 <option value="others">OTHERS</option>
             </select>
+            <div class="invalid-feedback">
+              Please fill in this required field.
+            </div>
             
               </div>
               <div class="form-group col-md-6">
@@ -2277,7 +2306,9 @@ align-self: stretch;
                 <option value="vaccination">Vaccination</option>
                 <option value="wellness_program">Wellness Program</option>
             </select>
-            
+            <div class="invalid-feedback">
+              Please fill in this required field.
+            </div>
               </div>
             </div>
             <p class="company-note">Note: This form is for demo requests only, please use the live chat for support inquiries.</p>
@@ -2762,11 +2793,22 @@ function toggleIcon(element) {
       var copy = document.querySelector(".logos-slide").cloneNode(true);
       document.querySelector(".logos").appendChild(copy);
 
-      document.addEventListener("DOMContentLoaded", () => {
+
+  // if (window.innerWidth <= 768) {
+  //   var copy = document.querySelector(".shift").cloneNode(true);
+  //   document.querySelector(".test").appendChild(copy);
+  //   var copy2 = document.querySelector(".shift-2").cloneNode(true);
+  //   document.querySelector(".test-2").appendChild(copy2);
+  // } 
+
+
+  document.addEventListener("DOMContentLoaded", () => {
   const steps = Array.from(document.querySelectorAll(".form-step"));
   const nextBtns = Array.from(document.querySelectorAll(".btn-next"));
-  const submitBtn = document.querySelector(".btn-submit")
+  const submitBtn = document.querySelector(".btn-submit");
   const form = document.getElementById("demoRequestForm");
+  const basicInfoNav = document.getElementById("navBasicInfo");
+  const companyDetailsNav = document.getElementById("navCompanyDetails");
   var navTabs = document.getElementById("nav-tab");
   let currentStep = 0;
 
@@ -2784,65 +2826,55 @@ function toggleIcon(element) {
     }
   }
 
-  function validateCurrentStep() {
-    // Get all form elements for the current step
-    const currentStepFormElements = steps[currentStep].querySelectorAll("input, select, textarea");
 
-    // Temporarily set form to use Bootstrap validation classes
+  function validateCurrentStep() {
+    const currentStepFormElements = steps[currentStep].querySelectorAll("input, select, textarea");
+    let isCurrentStepValid = true;
+
+    // Temporarily force Bootstrap validation styles
     form.classList.add('was-validated');
 
-    // Check validity for each form element
-    let isCurrentStepValid = true;
     currentStepFormElements.forEach(el => {
       if (!el.checkValidity()) {
         isCurrentStepValid = false;
+        // Additional logic or function calls to handle/display custom error messages can be added here
       }
     });
-
-    // Remove validation class if moving to another step
-    form.classList.remove('was-validated');
 
     return isCurrentStepValid;
   }
 
   nextBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      if (validateCurrentStep() && index < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
-      } else if (validateCurrentStep()) {
-        form.style.display = "none";
-        document.getElementById("stepConfirmation").style.display = "block";
+      if (validateCurrentStep()) {
+        if (index < steps.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+        } else {
+          form.submit(); // Or handle the final step before submission
+        }
       }
     });
   });
 
-  document.querySelector(".btn-submit").addEventListener("click", () => {
-    navTabs.style.display = "none"
-  })
+
+  submitBtn.addEventListener("click", () => {
+    if (validateCurrentStep()) {
+      navTabs.style.display = "none"
+      form.submit(); // Perform submission here or additional logic before submitting
+    }
+  });
 
   document.querySelector(".btn-submit-another").addEventListener("click", () => {
     form.style.display = "block";
-    navTabs.style.display = "flex"
+    navTabs.style.display = "flex";
     currentStep = 0;
     showStep(currentStep);
+    form.classList.remove('was-validated'); // Reset validation state
     form.reset();
   });
 
-  // Tab Navigation
-  const basicInfoNav = document.getElementById('navBasicInfo');
-  const companyDetailsNav = document.getElementById('navCompanyDetails');
-
-  basicInfoNav.addEventListener('click', function() {
-    currentStep = 0;
-    showStep(currentStep);
-  });
-
-  companyDetailsNav.addEventListener('click', function() {
-    currentStep = 1; // Assuming 'Company Details' is the second step
-    showStep(currentStep);
-  });
-
+  // Initialize the first step
   showStep(currentStep);
 });
 
