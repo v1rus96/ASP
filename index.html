@@ -624,7 +624,7 @@ margin-top: -20px;
         height: 38px;
         padding: 8px, 16px, 8px, 16px;
         border-radius: 8px;
-        border: none;
+        /* border: none; */
         background: transparent;
       }
 
@@ -965,6 +965,10 @@ margin-top: -20px;
         overflow: hidden;
       }
 
+      .py-6 {
+        padding-top: 10rem!important;
+      }
+
 
 
 
@@ -1105,7 +1109,7 @@ margin-top: -20px;
 }
 
 .modal-text-content {
-  max-height: 200px !important;
+  bottom: 120px !important;
 }
 
 .space {
@@ -1180,6 +1184,10 @@ margin-top: -20px;
 
   .md-0 { 
     margin: auto !important;
+  }
+
+  .mobile {
+    display: none;
   }
 
   .flexit {
@@ -1278,7 +1286,7 @@ iframe {
       .modal-content {
         border: none;
         border-radius: 16px;
-        height: 720px;
+        height: -webkit-fill-available;
       }
 
       .service-modal .modal-body img {
@@ -1335,7 +1343,7 @@ iframe {
 }
 
       .modal-body {
-    max-height: 720px; /* Adjust the height as needed */
+    max-height: -webkit-fill-available; /* Adjust the height as needed */
 }
 
 .news .modal-body {
@@ -1378,13 +1386,20 @@ line-height: 24px; /* 171.429% */
 /* Style for the scrollable text content */
 .modal-text-content {
     overflow-y: auto;
-    max-height: 197px; /* Adjust the height as needed */
+    position: absolute;
+    top: 240px;
+    left: 20px;
+    right: 20px;
+    bottom: 70px;
+    /* max-height: 314px; */
+    /* max-height: 314px;  */
 }
 
 /* Style the modal to have a maximum height */
 .modal-dialog {
-    max-height: 720px;
+    height: -webkit-fill-available;
     display: flex;
+    margin: 40px auto;
     /* flex-direction: column;
     justify-content: center; */
 }
@@ -1560,9 +1575,21 @@ align-self: stretch;
         color: #878C69;
         background-color: rgba(222, 227, 197, 0.20);
         border: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 16px;
+        margin-right: 16px;
         /* position: absolute;
         bottom: 0;
         width: 95.5%; */
+      }
+
+      .modal-footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
       }
 
       .footer-title {
@@ -2064,6 +2091,11 @@ align-self: stretch;
                     <img src="news/ASP Webinar 29Jan2024.png" alt="In House Clinic Management" />
                   </div>
                 </div>
+                <div class="swiper-slide mobile">
+                  <!-- <div class="card">
+                    <img src="news/ASP Webinar 29Jan2024.png" alt="In House Clinic Management" />
+                  </div> -->
+                </div>
                 <!-- <div class="swiper-slide">
                   <div class="card">
                     <img src="news/Covid-19 Screening.png" alt="In House Clinic Management" />
@@ -2123,7 +2155,7 @@ align-self: stretch;
     </section>
 
     <!-- Request for Demo Section -->
-    <section class="request-demo-section py-5" id="demoSection">
+    <section class="request-demo-section py-6 py-5" id="demoSection">
       <div class="container">
         <h2 class="text-center mb-4 section-title" style="margin-bottom: 8px !important;">Request for Demo</h2>
         <p class="text-center mb-5" style="font-weight: 300;">
@@ -2207,8 +2239,9 @@ align-self: stretch;
                 <label for="department"
                   >Which department do you belong in?</label
                 >
-                <select id="department" name="department" class="form-control selectpicker" required="required">
-                  <option disabled selected>Choose...</option>
+                <select id="department" name="department" class="form-control selectpicker" required="required" title="Choose...">
+                  <!-- <option disabled selected>Choose...</option> -->
+                  <option value="">None</option>
                   <option value="hr">Human Resources</option>
                   <option value="admin">Admin / Management</option>
                   <option value="finance">Finance</option>
@@ -2231,8 +2264,8 @@ align-self: stretch;
                 <label for="department"
                 >Which country is your company office located in? </label
               >
-              <select id="country" name="country" class="form-control selectpicker" required="required">
-                <option disabled selected>Choose...</option>
+              <select id="country" name="country" class="form-control selectpicker" required="required" title="Choose...">
+                <option value="">None</option>
                 <option value="malaysia">Malaysia</option>
                 <option value="singapore">Singapore</option>
                 <!-- Add other department options here -->
@@ -2245,8 +2278,8 @@ align-self: stretch;
                 <label for="department"
                 >What is your company size in terms of number of employees?</label
               >
-              <select id="size" name="size" class="form-control selectpicker" required="required">
-                <option disabled selected>Choose...</option>
+              <select id="size" name="size" class="form-control selectpicker" required="required" title="Choose...">
+                <option value="">None</option>
                 <option value="50">1 ~ 50</option>
                 <option value="200">51 ~ 200</option>
                 <option value="500">201 ~ 500</option>
@@ -2267,8 +2300,8 @@ align-self: stretch;
                 <label for="department"
                 >Which industry fits your company description?</label
               >
-              <select id="industry" name="industry" class="form-control selectpicker" required="required">
-                <option disabled selected>Choose...</option>
+              <select id="industry" name="industry" class="form-control selectpicker" required="required" title="Choose...">
+                <option value="">None</option>
                 <option value="aerospace">AEROSPACE</option>
                 <option value="architectural_services">ARCHITECTURAL SERVICES</option>
                 <option value="business_services">BUSINESS SERVICES</option>
@@ -2300,6 +2333,7 @@ align-self: stretch;
                 >What health benefits do you cover for your employees?</label
               >
               <select id="benefits" name="benefits[]" class="form-control selectpicker" multiple title="Choose..." required="required">
+                <option value="">None</option>
                 <option value="gp">GP</option>
                 <option value="dental">Dental</option>
                 <option value="flexi_benefits">Flexi Benefits</option>
@@ -2459,7 +2493,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">In-House Clinic Management</h5>
@@ -2497,7 +2531,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Out-Patient Benefits Administration</h5>
@@ -2548,7 +2582,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">In-Patient Benefits Administration</h5>
@@ -2585,7 +2619,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Medical Surveillance & Audiometry Test</h5>
@@ -2630,7 +2664,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Work Place Health Screening & Wellness Programmes</h5>
@@ -2671,7 +2705,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Medicine & Medical Equipments Supply</h5>
@@ -2703,7 +2737,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Doctors & Nurses Outsourcing</h5>
@@ -2735,7 +2769,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
 
 <!-- Modal -->
 <div class="service-modal modal fade" id="exampleModalCenter8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Telemedicine Services</h5>
@@ -2879,6 +2913,25 @@ function toggleIcon(element) {
     if (validateCurrentStep()) {
       navTabs.style.display = "none"
       form.submit(); // Perform submission here or additional logic before submitting
+    }
+  });
+
+  companyDetailsNav.addEventListener("click", () => {
+    if (currentStep === 0) {
+      if (validateCurrentStep()) {
+        currentStep = 1; // Move to Company Details step after validation
+        showStep(currentStep);
+      }
+    } else {
+      // If already on the first step and it's valid, or if on the second step, just show it
+      showStep(1);
+    }
+  });
+
+  basicInfoNav.addEventListener("click", () => {
+    if (currentStep > 0) { // Check if we're not already at the Basic Info step
+      currentStep = 0; // Move back to Basic Info step
+      showStep(currentStep);
     }
   });
 
