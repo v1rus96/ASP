@@ -966,9 +966,16 @@ margin-top: -20px;
       }
 
       .py-6 {
-        padding-top: 10rem!important;
+        padding-top: 5rem!important;
       }
 
+      .next-mobile {
+      display: none;
+    }
+
+    .next-desktop {
+      display: block;
+    }
 
 
 
@@ -1002,6 +1009,42 @@ margin-top: -20px;
 
     .statistics-section .card-body {
       padding: 16px;
+    }
+
+    .modal-body-image {
+      height: 140px !important;
+    }
+
+    .modal-text-content {
+      font-size: 14px;
+      top: 172px !important;
+    }
+    
+    .modal-alert {
+      font-size: 12px;
+    }
+
+    .modal-dialog {
+      margin: 40px 10px !important;
+    }
+
+    a.btn.btn-primary.btn-modal {
+      padding: 4px 0px;
+      height: 32px;
+    }
+
+    .next-mobile {
+      display: block;
+    }
+
+    .next-desktop {
+      display: none;
+    }
+
+    .modal-header {
+      font-size: 20px;
+      padding: 16px;
+      padding-bottom: 0px;
     }
 
     .shift .col {
@@ -1188,6 +1231,10 @@ margin-top: -20px;
 
   .mobile {
     display: none;
+  }
+
+  .modal-footer {
+    padding: 1rem 3rem;
   }
 
   .flexit {
@@ -1391,6 +1438,7 @@ line-height: 24px; /* 171.429% */
     left: 20px;
     right: 20px;
     bottom: 70px;
+    font-weight: 300;
     /* max-height: 314px; */
     /* max-height: 314px;  */
 }
@@ -2520,8 +2568,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter8">← Telemedicine Services</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2">Out-Patient Benefits Administration →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter8" class="next-desktop">← Telemedicine Services</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2" class="next-desktop">Out-Patient Benefits Administration →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter8" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
@@ -2571,8 +2621,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter">← In-House Clinic Management</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter3">In-Patient Benefits Administration →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter" class="next-desktop">← In-House Clinic Management</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter3" class="next-desktop">In-Patient Benefits Administration →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter3" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
@@ -2608,8 +2660,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2">← Out-Patient Benefits Administration</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter4">Medical Surveillance & Audiometry Test →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2" class="next-desktop">← Out-Patient Benefits Administration</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter4" class="next-desktop">Medical Surveillance & Audiometry Test →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter4" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
@@ -2653,8 +2707,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter3">← In-Patient Benefits Administration</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter5">Work Place Health Screening & Wellness Programmes →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter3" class="next-desktop">← In-Patient Benefits Administration</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter5" class="next-desktop">Work Place Health Screening & Wellness Programmes →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter3" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter5" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
@@ -2694,8 +2750,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter4">← Medical Surveillance & Audiometry Test</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter6">Medicine & Medical Equipments Supply →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter4" class="next-desktop">← Medical Surveillance & Audiometry Test</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter6" class="next-desktop">Medicine & Medical Equipments Supply →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter4" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter6" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
@@ -2726,8 +2784,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter5">← Work Place Health Screening & Wellness Programmes</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter7">Doctors & Nurses Outsourcing →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter5" class="next-desktop">← Work Place Health Screening & Wellness Programmes</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter7" class="next-desktop">Doctors & Nurses Outsourcing →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter5" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter7" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
@@ -2758,8 +2818,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter6">← Medicine & Medical Equipments Supply</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter8">Telemedicine Services →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter6" class="next-desktop">← Medicine & Medical Equipments Supply</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter8" class="next-desktop">Telemedicine Services →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter6" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter8" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
@@ -2797,8 +2859,10 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </div>
       </div>
       <div class="modal-footer navigation">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter7">← Doctors & Nurses Outsourcing</a>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter">In-House Clinic Management →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter7" class="next-desktop">← Doctors & Nurses Outsourcing</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter" class="next-desktop">In-House Clinic Management →</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter7" class="next-mobile">←</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter" class="next-mobile">→</a>
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Contact Us</button> -->
       </div>
