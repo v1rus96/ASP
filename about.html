@@ -886,6 +886,14 @@ background: #EFEFEF;
   flex: 1 1 calc(50% - 10px); /* Sets the basis for two columns */
   box-sizing: border-box; /* Ensures padding and border are included in width */
 }
+
+/* Target the last card to center it if it is the only one in the row */
+.award-cards-container :last-child:nth-child(odd) {
+  flex-grow: unset;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
       /* Existing CSS styles here... */
       @keyframes marquee {
     0% { transform: translateX(100%); }
@@ -1500,10 +1508,19 @@ align-self: stretch;
             <!-- Award Card 2 -->
             <div class="award-card mb-4">
               <div class="award-image-placeholder">
-                  <img src="awards/Megaklinik Zahran.jpg" alt="In House Clinic Management" width="140" height="160"/>
+                  <img src="awards/AMCHAM MY CARES.png" alt="In House Clinic Management" width="140" height="160"/>
               </div>
               <div class="award-box">
-                <div class="award-title">Mengaklinik Zahran Haari Penghargaan Korporat Anugerah Perkhidmatan Terbaik (TPA)</div>
+                <div class="award-title">MY AMCHAM CARES Excellence in Corporate Social Responsibility (CSR)</div>
+                <div class="award-description"></div>
+              </div>
+            </div>
+            <div class="award-card mb-4">
+              <div class="award-image-placeholder">
+                  <img src="awards/UNGC.jpg" alt="In House Clinic Management" width="140" height="160"/>
+              </div>
+              <div class="award-box">
+                <div class="award-title">Certificate of Joining the United Nations Global Compact</div>
                 <div class="award-description"></div>
               </div>
             </div>
@@ -1569,8 +1586,8 @@ align-self: stretch;
                 <img src="c1.png"  height="100%"/>
             </div>
             <div class="certification-box">
-            <div class="certification-title">Competitive Prices</div>
-            <div class="certification-description">The reason for our progressive growth is in our range of quality services and products, which are well accepted at home and abroad, which is maintained and promoted by a qualified and dedicated workforce.</div>
+            <div class="certification-title">ISO 27001:2013</div>
+            <div class="certification-description">We understand the importance of keeping your data secure. We are ISO 27001:2013 certified, which is a testament to our absolute commitment to keep your information secure.</div>
         </div>
           </div>
         </div>
@@ -1580,9 +1597,9 @@ align-self: stretch;
                 <img src="c2.png"  height="100%"/>
             </div>
             <div class="certification-box">
-            <div class="certification-title">Quality Products & Services</div>
-            <div class="certification-description">Ensures a standard process that delivers high quality products and services that allows us to constantly meet and exceed our customers' expectations in these key areas.</div>
-        </div>
+            <div class="certification-title">MSC Malaysia</div>
+            <div class="certification-description">We are MSC Malaysia status company which is a recognition by the Government of Malaysia through the Multimedia Development Corporation (MDeC), for ICT and ICT-facilitated businesses that develop or use multimedia technologies to produce and enhance their products and services.</div>
+          </div>
           </div>
         </div>
         <!-- Repeat for other award cards -->
