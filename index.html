@@ -3,7 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TBC</title>
+    <title>
+      Third Party Administrator (TPA),
+          Managed Care Organization (MCO),
+          Third Party Administration,
+          Medical Surveillance,
+          Medical Surveillance (follow DOSH regulation),
+          Audiometry Hearing Test (follow DOSH regulation)
+          Employee Flexi Benefit,
+          In House Clinic,
+          In-Patient Management,
+          Health Screening,
+          Wellness Programmes,
+          Panel Clinic Management,
+          Doctor Outsourcing,
+          Nurses Outsourcing,
+          Medicine Supplies,
+          Employee Outpatient Benefit,
+          Telemedicine Service,
+          Online Doctor Consultation,
+          Online Psychologist Consultation,
+          Online Nutritionist Consultation,
+          Online Dietitian Consultation,
+          Online Psychologist Training,
+          Online Nutritionist Training,
+          Online Pharmacist Consultation | ASP Medical Group
+    </title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -20,1633 +46,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css">
     <!-- Custom CSS -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&family=Pacifico&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&family=Pacifico&display=swap");
-
-      body {
-        font-family: "Manrope", sans-serif;
-        /* overflow-x: hidden; */
-      }
-
-      section {
-        overflow-x: hidden;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      @keyframes slide {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-100%);
-        }
-      }
-
-      .logos {
-        overflow: hidden;
-        padding: 60px 0;
-        background: white;
-        white-space: nowrap;
-        position: relative;
-      }
-
-      .logos:before,
-      .logos:after {
-        position: absolute;
-        top: 0;
-        width: 250px;
-        height: 100%;
-        content: "";
-        z-index: 2;
-      }
-
-      .logos:before {
-        left: 0;
-        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-      }
-
-      .logos:after {
-        right: 0;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-      }
-
-      /* .logos:hover .logos-slide {
-  animation-play-state: paused;
-} */
-
-      .logos-slide {
-        display: inline-block;
-        animation: 80s slide infinite linear;
-      }
-
-      .logos-slide img {
-        height: 50px;
-        margin: 0 40px;
-        filter: grayscale(1);
-        opacity: 0.5;
-      }
-      .custom-navbar {
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  background: white;
-  border-radius: 10px;
-  height: 62px;
-  margin-top: 32px;
-  margin-left: 34px;
-  margin-right: 34px;
-}
-
-.custom-navbar .container {
-  margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-}
-
-.form-inline .btn-outline-secondary {
-    color: #000;
-    border: none;
-  }
-
-  .form-inline .dropdown-menu {
-    right: 0;
-    left: auto;
-    float: right;
-  }
-
-  .form-inline .dropdown-menu {
-    border-radius: 8px;
-    margin-top: 18px;
-  }
-
-  .form-inline .dropdown-item {
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-  }
-
-  .form-inline .dropdown-item:hover {
-    background-color: #E0ECEF;
-  }
-
-  .form-inline .dropdown-item:active {
-    background-color: #E0ECEF;
-  }
-
-  button.btn.btn-primary.dropdown-toggle.signup-button:active {
-    background-color: #3A7792;
-  }
-
-  button.btn.btn-primary.dropdown-toggle.signup-button:hover {
-    background-color: #3A7792;
-  }
-
-  button.btn.btn-primary.dropdown-toggle.signup-button:focus {
-    background-color: #3A7792;
-  }
-
-.sticky-top {
-  top: 8px;
-}
-
-.custom-navbar .nav-link {
-  color: #151515;
-
-text-align: center;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 22px;
-  position: relative;
-  display: inline-block;
-}
-
-.custom-navbar .nav-item {
-  /* width: 78px; */
-height: 22px;
-padding: 0px 8px;
-}
-.custom-navbar .nav-link:after {
-  position: absolute;
-  left: 50%;
-  content: '';
-  height: 2px;
-  background: #294A5D;
-  transition: all 0.2s linear;
-  width: 0;
-  bottom: -3px;
-}
-
-.custom-navbar .nav-link:hover:after {
-  width: 100%;
-  left: 0px;
-}
-
-.custom-navbar .nav-link:hover {
-  color: #294A5D;
-font-weight: 700;
-transition: all 0.2s linear;
-}
-
-.custom-navbar a.nav-link {
-  padding: 0;
-  width: 90px;
-}
-
-.custom-navbar ul.navbar-nav.mr-auto {
-  gap: 16px;
-}
-
-/* .nav-link {
-  color: #151515;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-.nav-item.active .nav-link,
-.nav-link:hover {
-  border-bottom: 1px solid #a9b7be;
-} */
-
-.signup-button {
-  background: #4b97b8;
-  border-radius: 8px;
-  color: white;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 22px;
-}
-
-/* Responsive styles for mobile */
-@media (max-width: 991.98px) {
-  .custom-navbar {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 25px;
-    border-radius: 0;
-  }
-
-  .custom-navbar .container {
-    background: white;
-  }
-
-  .sticky-top {
-    top: 0;
-  }
-  
-  .navbar-brand {
-    text-align: center;
-  }
-  
-  .navbar-toggler {
-    float: right;
-  }
-
-  .nav-link {
-    font-family: "Nanum Myeongjo", serif;
-    font-size: 32px;
-    line-height: 22px;
-  }
-
-  .navbar-collapse {
-    background: white;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .navbar-nav .nav-link {
-    display: block;
-    padding: 20px 1rem;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-  }
-
-  .form-inline {
-    flex-direction: column;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .form-inline .btn-outline-secondary {
-    color: #4b97b8;
-    border: 1px solid;
-    border-color: #4b97b8;
-  }
-
-  .form-inline .nav-link,
-  .form-inline .btn {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .navbar-toggler-icon {
-    /* You can add a custom SVG or image here */
-  }
-}
-
-
-      .hero-section {
-        background: url("./bg.png") no-repeat center center; /* Replace with your image path */
-        background-size: cover;
-        height: 80vh;
-        padding: 100px 0; /* Adjust padding to fit your design */
-        margin: 24px;
-        margin-bottom: 0px;
-        margin-top: -70px;
-        border-radius: 20px;
-        display: flex;
-        align-items: end;
-      }
-
-      @media (max-width: 991.98px) { 
-        .hero-section {
-          margin-top: 0;
-      }
-
-      .hero-text {
-        font-size: 24px !important;
-        line-height: 32px !important;
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-      }
-
-      .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-      }
-    }
-
-      .hero-text {
-        color: #ffffff; /* Replace with your desired text color */
-
-        margin-bottom: 20px; /* Space for the buttons */
-        font-family: "Nanum Myeongjo", serif;
-        font-size: 56px;
-        line-height: 72px;
-        margin-left: 72px;
-        margin-right: 72px;
-      }
-
-      .btn-primary {
-        background-color: #4b97b8;
-        font-size: 14px;
-        line-height: 22px;
-        padding: 8px 16px 8px 16px;
-        border-radius: 8px;
-        border: none;
-      }
-
-      .btn-outline-secondary {
-        font-size: 14px;
-        line-height: 22px;
-        padding: 8px 16px 8px 16px;
-        border-radius: 8px;
-        border-color: #ffffff;
-        color: #ffffff;
-      }
-
-      .btn-primary:hover {
-        background-color: #3a7792;
-      }
-
-      .btn-outline-secondary:hover {
-        background-color: #ffffff;
-        border-color: #ffffff;
-        color: #000000;
-      }
-
-      .hero-buttons .btn-primary,
-      .hero-buttons .btn-outline-secondary {
-        margin-right: 10px; /* Space between buttons */
-        width: 198px;
-    height: 46px;
-    padding: 12px;
-      }
-
-      .hero-logos {
-        gap: 64px;
-      }
-
-      .hero-logos img {
-        height: 25px; /* Adjust to your logo size */
-        margin: 0 10px; /* Space between logos */
-        opacity: 0.5; /* Logos less prominent */
-        transition: opacity 0.3s ease-in-out;
-      }
-
-      .font-nunum {
-        font-family: "Nanum Myeongjo", serif;
-      }
-
-      .hero-logos img:hover {
-        opacity: 1; /* Full color on hover */
-      }
-
-      .section-title {
-        color: #151515;
-        font-size: 48px;
-        font-family: "Nanum Myeongjo", serif;
-        font-weight: 700;
-        line-height: 72px;
-        word-wrap: break-word;
-      }
-
-      .footer-title {
-        color: #151515;
-        font-size: 32px;
-        font-family: "Nanum Myeongjo", serif;
-        font-weight: 700;
-        line-height: 72px;
-        word-wrap: break-word;
-      }
-
-      .section-title-white {
-        color: #ffffff;
-        font-size: 48px;
-        font-family: "Nanum Myeongjo", serif;
-        font-weight: 500;
-        line-height: 72px;
-        word-wrap: break-word;
-      }
-
-      .statistics-section .card {
-        background-color: #efefef; /* White background */
-        border-radius: 16px; /* Rounded corners */
-        display: flex;
-        border: none;
-        flex-direction: column;
-        justify-content: space-between;
-        max-height: 358px;
-      }
-
-      form#demoRequestForm {
-        background-color: #F9F9F9;
-        border: 1px solid #D3D3D3;
-      }
-
-      .statistics-section .card-body {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-between; */
-        height: 100%;
-        gap: 8px;
-      }
-
-      .statistics-section .card-link {
-        text-align: start;
-        color: #4B97B8;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-top: -20px;
-      }
-
-      .statistics-section .card-number {
-        font-size: 80px; /* Large number size */
-        line-height: 109.28px;
-        color: #294a5d; /* Text color for the numbers */
-        font-weight: 500;
-      }
-
-      .statistics-section .card-number-text {
-        font-size: 24px; /* Large number size */
-        line-height: 32.78px;
-        color: rgba(0, 0, 0, 0.60); /* Text color for the numbers */
-        font-weight: 300;
-      }
-
-      .statistics-section .card-subtitle {
-        font-size: 1rem; /* Subtitle size */
-        color: #6c757d; /* Subtitle color */
-        margin-bottom: 1rem;
-      }
-
-      .statistics-section .card-text {
-        color: #333333; /* Dark grey color for the text */
-        font-size: 18px; /* Larger font size for the title */
-        font-weight: bold;
-        margin-bottom: 16px;
-        text-align: start;
-        font-size: 30px;
-        line-height: 40.98px;
-        font-weight: 600;
-      }
-
-      .space {
-        margin-bottom: 48px !important;
-      }
-
-      .statistics-section .card-info {
-        color: #666666; /* Medium grey for the info text */
-        font-size: 14px; /* Smaller font size for the info text */
-        /* margin-bottom: 24px; */
-        font-weight: 300;
-        text-align: start;
-      }
-
-      .statistics-section .icon-image {
-        width: 85px; /* Adjust the size as needed */
-        height: auto;
-        /* margin-top: 16px; */
-        align-self: end; /* Center the icon horizontally */
-      }
-
-      .statistics-section .btn-primary {
-        width: 198px;
-        height: 46px;
-        padding: 12px;
-      }
-
-      .testimonial-section {
-        background-color: #e0ecef; /* Adjust to match the image background */
-        padding-top: 100px;
-      }
-
-      .testimonial-section h2 {
-        color: #333; /* Title color */
-        margin-bottom: 0; /* No bottom margin */
-      }
-
-
-      .testimonial-card {
-        background: white;
-        padding: 2rem;
-        margin: 1rem 0;
-        border: none;
-        height: 271px;
-        width: 400px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .testimonial-card:hover {
-        transform: scale(1.03); /* Scale card on hover */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .testimonial-card blockquote {
-        position: relative;
-        font-size: 1rem;
-        line-height: 1.5;
-        quotes: "“" "”" "‘" "’";
-      }
-
-      .testimonial-card blockquote::before {
-        content: open-quote;
-        font-size: 2em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-        color: #333; /* Quote marks color */
-      }
-
-      .testimonial-card blockquote::after {
-        content: close-quote;
-      }
-
-      .testimonial-card p {
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-
-      .testimonial-footer {
-        display: flex;
-        justify-content: flex-end; /* Align HSBC logo to the right */
-        align-items: center;
-        margin-top: 1.5rem;
-        gap: 15px;
-      }
-
-      .line {
-        border: 0.5px solid lightgrey;
-        width: 100%;
-      }
-
-      .testimonial-logo {
-        width: 100px; /* Logo size */
-        height: auto;
-      }
-
-      .request-demo-section {
-        background-color: #e9ebdc; /* Match the background color to your image */
-        color: #333; /* Text color */
-      }
-
-      .request-demo-section h2 {
-        color: #333; /* Title color */
-      }
-
-      .request-demo-section form {
-        background-color: #fff; /* Form background */
-        padding: 3rem 10rem;
-        border-radius: 16px; /* Match to your image's form style */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        margin: auto;
-        font-size: 14px !important;
-        font-weight: 300 !important;
-        min-height: 473px;
-        width: 886px;
-      }
-
-      .request-demo-section .form-control  {
-        font-size: 14px !important;
-        font-weight: 300 !important;
-      }
-
-      .request-demo-section .form-control {
-        height: 40px;
-        padding: 8px, 16px, 8px, 16px;
-        border-radius: 8px;
-        border: 1px;
-        border: 1px solid #ebebeb;
-      }
-
-      .request-demo-section .dropdown-toggle  {
-        font-size: 14px !important;
-        font-weight: 300 !important;
-      }
-
-      .request-demo-section .dropdown-toggle {
-        height: 38px;
-        padding: 8px, 16px, 8px, 16px;
-        border-radius: 8px;
-        /* border: none; */
-        background: transparent;
-      }
-
-      .request-demo-section .form-select {
-        -webkit-appearance: none;
-      }
-
-      .bootstrap-select>.dropdown-toggle:after {
-        margin-top: 0;
-      }
-
-
-
-      .request-demo-section .btn-demo {
-        background-color: #88c057; /* Button color */
-        border: none;
-        border-radius: 20px; /* Rounded button edges */
-        padding: 0.75rem 2rem; /* Button padding */
-        color: white; /* Text color */
-        margin-top: 1rem; /* Space above the button */
-        transition: background-color 0.3s ease;
-      }
-
-      .request-demo-section .btn-demo:hover {
-        background-color: #79ad49; /* Slightly darker on hover */
-      }
-
-      .request-demo-section label {
-        font-weight: normal; /* Adjust label font weight as needed */
-      }
-
-      .footer-section {
-        background-color: #f5f5f5; /* Adjust to match the image */
-        color: #333; /* Adjust text color as needed */
-      }
-
-      .footer-section h4 {
-        color: #333; /* Title color */
-        margin-bottom: 1rem;
-      }
-
-      .footer-section p {
-        font-size: 0.9rem; /* Adjust font size as needed */
-        margin-bottom: 0.5rem; /* Spacing between lines */
-      }
-
-      .footer-section p i {
-        margin-right: 0.5rem; /* Space between icon and text */
-      }
-
-      .footer-section .text-center {
-        margin-top: 2rem; /* Space above the copyright text */
-      }
-
-      .footer-section a {
-        color: #333; /* Link color */
-        text-decoration: none; /* No underline */
-        margin: 0 0.5rem; /* Spacing between links */
-      }
-
-      .services-section {
-        background-color: #294a5d;
-      }
-
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .services-section .swiper {
-        overflow: visible;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide a {
-        text-decoration: none;
-      }
-
-      .form-control::placeholder {
-        color: #B5B8BD;
-      }
-
-      .center {
-        justify-content: center;
-      }
-
-
-      .services-section .card:after {
-  position: absolute;
-  left: 50%;
-  content: '';
-  height: 1px;
-  background: #A9B7BE;
-  transition: all 0.2s linear;
-  width: 0;
-  bottom: -3px;
-}
-.services-section .card:hover:after {
-  width: 100%;
-  left: 0px;
-}
-
-      .news .swiper-slide .card {
-        height: 480px;
-        min-width: 338.76px;
-        background: none;
-        border: none;
-        border-radius: 8px;
-        margin: 20px;
-        box-shadow: 0px 4px 16px 2px rgba(0, 0, 0, 0.20);
-      }
-
-      .news .swiper-slide .card img {
-        background: lightgray 50%;
-        height: 480px;
-        /* width: 338.76px; */
-        border-radius: 8px;
-      }
-
-      .news .swiper-slide {
-        min-width: 338.76px;
-        min-height: 480px;
-      }
-
-      .news .swiper {
-        /* right: -300px; */
-        height: 100%;
-        width: 70vw;
-      }
-
-      .swiper-slide .card {
-        /* height: 329px;
-        width: 368px; */
-        background: none;
-        border: none;
-      }
-
-      .swiper-slide .card img {
-        height: 244px;
-        border-radius: 8px;
-      }
-
-      .swiper-slide .card-title {
-        color: white;
-        font-size: 16px;
-        font-family: "Nanum Myeongjo", serif;
-        font-weight: 700;
-        line-height: 24px;
-        word-wrap: break-word;
-        text-align: start;
-      }
-
-      .swiper-slide .card-text {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 12px;
-        font-family: Manrope;
-        font-weight: 400;
-        line-height: 24px;
-        word-wrap: break-word;
-        text-align: start;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      button.btn.dropdown-toggle.bs-placeholder.btn-light {
-        background-color: white;
-      }
-
-      .swiper-controls {
-        display: flex;
-        justify-content: flex-end;
-        height: 46px;
-        width: 80px;
-      }
-
-      .swiper-button-prev2,
-      .swiper-button-next2 {
-        background: none;
-        color: #000; /* This should be the color of your icons */
-        border: none;
-        cursor: pointer;
-      }
-
-      .swiper-button-next2:focus,
-      .swiper-button-prev2:focus {
-        outline: none;
-      }
-
-      .swiper-button-prev2::after {
-        font-size: 15px;
-        border: 1.5px solid black;
-        border-radius: 100px;
-        padding: 10px 14px;
-      }
-
-      .swiper-button-next2::after {
-        font-size: 15px;
-        border: 1.5px solid black;
-        border-radius: 100px;
-        padding: 10px 14px;
-      }
-
-      .swiper-button-prev,
-      .swiper-button-next {
-        background: none;
-        color: #ffffff; /* This should be the color of your icons */
-        border: none;
-        cursor: pointer;
-      }
-
-      .swiper-button-next:focus,
-      .swiper-button-prev:focus {
-        outline: none;
-      }
-
-      .swiper-button-prev::after {
-        font-size: 15px;
-        border: 1.5px solid white;
-        border-radius: 100px;
-        padding: 10px 14px;
-      }
-
-      .swiper-button-next::after {
-        font-size: 15px;
-        border: 1.5px solid white;
-        border-radius: 100px;
-        padding: 10px 14px;
-      }
-
-      .test-top {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-
-      .shift {
-        position: absolute;
-        right: -500px;
-        transition: all 1s ease;
-        width: fit-content;
-        display: flex;
-      }
-
-      .shift:hover {
-        right: -100px;
-        transition: all 1s ease;
-      }
-
-      .test {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 350px;
-      }
-
-      .test::before {
-        content: "Clients’\A Feedbacks";
-        position: absolute;
-        color: #294a5d;
-        font-size: 48px;
-        font-family: "Nanum Myeongjo", serif;
-        font-weight: 700;
-        line-height: 72px;
-        right: -90px;
-        white-space: pre;
-        left: 0;
-      }
-
-      body.modal-open {
-    overflow: hidden;
-}
-
-      .test-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 350px;
-      }
-
-      /* .test-2::before {
-        content: "What the\A Employees Say";
-        text-align: left;
-        position: absolute;
-        color: #294a5d;
-        font-size: 48px;
-        font-family: "Nanum Myeongjo", serif;
-        font-weight: 700;
-        line-height: 72px;
-        right: -90px;
-        white-space: pre;
-      } */
-
-      .shift-2 {
-        position: absolute;
-        left: -500px;
-        transition: all 1s ease;
-        width: fit-content;
-        display: flex;
-      }
-
-      .shift-2:hover {
-        left: -75px;
-        transition: all 1s ease;
-      }
-
-      .news .swiper-button-prev2::after {
-        border-color: black;
-        color: #000;
-      }
-
-      select#department.form-control option[selected][disabled]  {
-          color: #B5B8BD !important;
-      }
-
-      .news .swiper-button-next2::after {
-        border-color: black;
-        color: #000;
-      }
-
-      .news .swiper-controls {
-        position: absolute;
-        width: 100px;
-      }
-
-      body.modal-dialog {
-        overflow: hidden;
-      }
-
-      .py-6 {
-        padding-top: 5rem!important;
-      }
-
-      .next-mobile {
-      display: none;
-    }
-
-    .next-desktop {
-      display: block;
-    }
-
-
-
-      /* Existing CSS styles here... */
-      @keyframes marquee {
-    0% { transform: translateX(50%); }
-    100% { transform: translateX(-40%); }
-}
-
-@keyframes marquee2 {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(40%); }
-}
-
-      /* Responsive adjustments for mobile devices */
-     @media screen and (max-width: 768px) {
-
-      body, html {
-        font-family: "Manrope", sans-serif;
-        max-width: 100%;
-        /* overflow-x: hidden; */
-      }
-    .shift {
-        position: relative;
-        right: 0;
-        left: 0;
-        transition: none;
-        flex-direction: row; /* Keep it horizontal */
-        animation: marquee 20s linear infinite; /* Apply marquee animation */
-    }
-
-    .statistics-section .card-body {
-      padding: 16px;
-    }
-
-    .modal-body-image {
-      height: 140px !important;
-    }
-
-    .modal-text-content {
-      font-size: 14px;
-      top: 172px !important;
-    }
-    
-    .modal-alert {
-      font-size: 12px;
-    }
-
-    .modal-dialog {
-      margin: 40px 10px !important;
-    }
-
-    a.btn.btn-primary.btn-modal {
-      padding: 4px 0px;
-      height: 32px;
-    }
-
-    .next-mobile {
-      display: block;
-    }
-
-    .next-desktop {
-      display: none;
-    }
-
-    .modal-header {
-      font-size: 20px;
-      padding: 16px;
-      padding-bottom: 0px;
-    }
-
-    .shift .col {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    .shift-2 .col {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    .shift-2 {
-        position: relative;
-        right: 0;
-        left: 0;
-        transition: none;
-        flex-direction: row; /* Keep it horizontal */
-        animation: marquee2 20s linear infinite; /* Apply marquee animation */
-    }
-
-    .m-0 {
-        margin: 0;
-      }
-
-      .p-6 {
-        padding: 4px;
-      }
-
-      .mb-4 {
-        margin-bottom: 0 !important;
-      }
-
-    .copyright {
-      /* font-size: 10px; */
-      padding: 15px 20px !important;
-    }
-
-    .copyright-links {
-      flex-wrap: wrap;
-      gap: 0 !important;
-    }
-
-    .gaps {
-      gap: 30px;
-      font-size: 10px !important;
-    }
-
-    /* Adjust other styles for mobile */
-    .test, .test-2 {
-        height: auto;
-        padding-top: 50px;
-    }
-
-    .request-demo-section form {
-      height: auto;
-      width: auto;
-    }
-
-    .test::before, .test-2::before {
-      content: "Clients’ Feedbacks";
-        font-size: 32px;
-        line-height: normal;
-        margin-bottom: 20px;
-        top: 0 !important;
-    }
-
-    form#demoRequestForm {
-      min-height: 635px;
-    }
-
-    .section-title-white {
-      font-size: 32px;
-    }
-
-    .testimonial-card {
-        /* width: 100%; */
-        margin: 0.5rem 0;
-    }
-
-    .request-demo-section form {
-      padding: 24px 16px;
-      /* margin: 0 1rem; */
-    }
-
-    .navbar-toggler-icon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
-}
-
-.navbar-toggler-icon.open {
-  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="3" d="M4 7l22 22M4 29L26 7"/%3E%3C/svg%3E');
-}
-
-.hero-section {
-  height: 70vh;
-}
-
-.modal-alert {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-}
-
-.modal-text-content {
-  bottom: 120px !important;
-}
-
-.space {
-  flex-wrap: nowrap;
-  margin-bottom: 24px !important;
-}
-
-.mr-4 {
-  margin-right: 20px;
-}
-
-.half {
-  width: 50% !important;
-}
-
-.section-title {
-  font-size: 32px;
-  line-height: 42px;
-}
-
-.statistics-section .card-number {
-  font-size: 36px;
-  line-height: normal;
-}
-
-.statistics-section .card-number-text {
-  font-size: 14px;
-}
-
-.statistics-section .card-text {
-  font-size: 16px;
-  line-height: normal;
-}
-
-.statistics-section .card-info {
-  font-size: 12px;
-  line-height: normal;
-}
-
-.statistics-section .icon-image {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 8px;
-}
-
-.news .swiper {
-  width: 100%;
-  }
-
-  .ht {
-    height: 50px;
-    justify-content: end !important;
-    padding-right: 25px;
-  }
-
-  .custom-navbar ul.navbar-nav.mr-auto {
-    align-items: center;
-    margin-bottom: 24px;
-    gap: 32px;
-  }
-
-  .custom-navbar .nav-link {
-    font-size: 32px;
-  }
-
-  .custom-navbar a.nav-link {
-    width: 100%;
-  }
-
-  .md-0 { 
-    margin: auto !important;
-  }
-
-  .mobile {
-    display: none;
-  }
-
-  .modal-footer {
-    padding: 1rem 3rem;
-  }
-
-  .flexit {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    flex-direction: row !important;
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  body.service-modal {
-  overflow: hidden !important;
-}
-
-.footer .font-nunum p {
-  margin-bottom: 24px !important;
-}
-
-
-}
-
-iframe {
-  border-radius: 10px;
-}
-
-.footer .font-nunum p {
-  margin-bottom: auto;
-}
-
-.flexit {
-  display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.ht {
-  display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    width: 100%;
-}
-
-      .form-step {
-        display: none;
-      }
-
-      .form-step.active {
-        display: block;
-      }
-
-      .company-note {
-        color: rgba(0, 0, 0, 0.60);
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-      }
-
-      /* Style for your buttons */
-      .btn-next,
-      .btn-submit-another {
-        background-color: #adb96f;
-        width: 200px;
-        height: 46px;
-        padding: 12px;
-        color: #ffffff;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 300;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .btn-next:hover,
-      .btn-submit-another:hover {
-        background-color: #96A064;
-        color: #ffffff;
-      }
-
-      .btn-submit-another {
-        background-color: #4B97B8;
-      }
-
-      .btn-submit-another:hover {
-        background-color: #3A7792;
-      }
-
-      .service-modal .modal-dialog {
-        max-width: 720px;
-      }
-
-      .modal-content {
-        border: none;
-        border-radius: 16px;
-        height: -webkit-fill-available;
-      }
-
-      .service-modal .modal-body img {
-        border-radius: 8px;
-      }
-
-      .modal-body-image {
-        width: 100%;
-        height: 211px;
-        border-radius: 8px;
-        background-size: cover;
-        background-position: center;
-      }
-
-      .simg1 {
-        background-image: url('/servicesnew/In-House\ Clinic\ Management.jpg');
-      }
-
-      .simg2 {
-        background-image: url('/servicesnew/Out-Patient\ Benefit\ Management.jpg');
-      }
-
-
-      .simg3 {
-        background-image: url('/servicesnew/In-Patient\ Management.jpg');
-      }
-
-
-      .simg4 {
-        background-image: url('/servicesnew/MedicalSurveillance_AudiometryTest.jpg');
-      }
-
-
-      .simg5 {
-        background-image: url('/services/s5.png');
-      }
-
-      .simg6 {
-        background-image: url('/servicesnew/Medicine\ _\ Medical\ Equipments\ Supply.jpg');
-      }
-
-
-      .simg7 {
-        background-image: url('/services/s7.png');
-      }
-
-
-      .simg8 {
-        background-image: url('/servicesnew/Telemedicine\ Services.jpg');
-      }
-
-      .service-modal {
-  overflow: hidden !important;
-}
-
-      .modal-body {
-    max-height: -webkit-fill-available; /* Adjust the height as needed */
-}
-
-.news .modal-body {
-  text-align: center;
-  overflow: scroll;
-}
-
-.news .modal-body img { 
-  max-height: 600px;
-}
-
-      .navigation {
-        justify-content: space-between;
-      }
-      .navigation a {
-        color: rgba(0, 0, 0, 0.38) !important;
-
-text-align: center;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px; /* 171.429% */
-
-      }
-
-
-
-      .modal-title {
-        color: #6794B8;
-        font-family: "Nanum Myeongjo", serif;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 32px; /* 100% */
-      }
-
-      .modal-header {
-        border: none;
-      }
-
-      /* Style the modal to have a maximum height */
-/* Style for the scrollable text content */
-.modal-text-content {
-    overflow-y: auto;
-    position: absolute;
-    top: 240px;
-    left: 20px;
-    right: 20px;
-    bottom: 70px;
-    font-weight: 300;
-    /* max-height: 314px; */
-    /* max-height: 314px;  */
-}
-
-/* Style the modal to have a maximum height */
-.modal-dialog {
-    /* height: -webkit-fill-available; */
-    height: 90vh;
-    display: flex;
-    margin: 40px auto;
-    /* flex-direction: column;
-    justify-content: center; */
-}
-
-
-      .btn-modal{
-        background-color: #adb96f;
-        cursor: pointer;
-        width: 155px;
-      }
-
-      .btn-modal:hover{
-        background-color: #7e8945;
-        cursor: pointer;
-      }
-
-      .btn-modal:focus {
-        background-color: #7e8945 !important;
-        cursor: pointer;
-      }
-
-      .btn-modal:active {
-        background-color: #7e8945 !important;
-        cursor: pointer;
-      }
-
-      form#demoRequestForm {
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-        flex-direction: column;
-      }
-
-      div#stepConfirmation {
-        margin: auto;
-      }
-
-      .nav-tabs {
-        width: 100%;
-        align-self: flex-start !important;
-      }
-
-      div#stepBasicInfo {
-        width: 100%;
-      }
-
-      .filter-option {
-        font-size: 14px;
-      }
-
-      .bootstrap-select .dropdown-toggle .filter-option {
-        height: auto;
-      }
-
-
-
-      /* Styles for confirmation message */
-      .confirmation-message p {
-        font-size: 1.25rem;
-        text-align: center;
-        margin: 20px 0;
-      }
-
-      .confirmation-message {
-        text-align: center;
-      }
-
-      .confirmation-message .c-icon {
-        border: 2px solid #ADB96F;
-    border-radius: 100px;
-    text-align: center;
-      }
-
-      .confirmation-message .c-title {
-        color: rgba(0, 0, 0, 0.87);
-        text-align: center;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700 ;
-        line-height: 24px; 
-      }
-
-      .confirmation-message .c-sub {
-        color: rgba(0, 0, 0, 0.87);
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; 
-      }
-
-      .nav-tabs {
-        display: flex;
-        border: none;
-        margin-bottom: 15px;
-      }
-
-      .nav-item {
-        cursor: pointer;
-        flex: 1;
-      }
-
-      .spacer {
-        width: 30px;
-      }
-
-      .md-0 {
-        margin: 0 !important;
-      }
-
-      .nav-item h3 {
-        font-size: 14px;
-        color: #a9b7be;
-        font-weight: 400;
-        margin: 0;
-        padding: 15px 0;
-        border-top: 3px solid #a9b7be;
-      }
-
-      .nav-item.active h3 {
-        color: #4b97b8;
-        border-top: 3px solid #4b97b8;
-      }
-
-      .mt-12 {
-        margin-top: 104px;
-      }
-
-      .mb-8 {
-        margin-bottom: 72px;
-      }
-
-      .copyright {
-        background: #F6F6F6;
-        padding: 15px 100px;
-        font-size: 14px;
-      }
-
-      .copyright-links {
-        display: flex;
-        gap: 24px;
-      }
-
-      .copyright-links a {
-        color: #222222;
-      }
-
-
-      .email-link {
-        color: #294A5D;
-        font-size: 16px;
-        font-style: normal;
-        line-height: 72px;
-        text-decoration-line: underline;
-      }
-
-      .address-box {
-    display: flex;
-align-items: flex-start;
-/* gap: 16px; */
-align-self: stretch;
-}
-
-.footer img {
-        margin-right: 16px;
-      }
-
-      .footer p {
-        margin-bottom: 24px;
-      }
-
-      .modal-alert {
-        color: #878C69;
-        background-color: rgba(222, 227, 197, 0.20);
-        border: none;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-left: 16px;
-        margin-right: 16px;
-        /* position: absolute;
-        bottom: 0;
-        width: 95.5%; */
-      }
-
-      .modal-footer {
-        position: relative;
-        bottom: 0;
-        left: 0;
-      }
-
-      .footer-title {
-        color: #294A5D;
-      }
-
-      /* Add more custom styling as needed */
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -1654,7 +54,7 @@ align-self: stretch;
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
-          <img src="./logo.png" alt="Logo" class="logo mr-3" />
+          <img src="./assets/images/logo.png" alt="Logo" class="logo mr-3" />
         </a>
         <!-- Toggler button for mobile -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -1735,59 +135,59 @@ align-self: stretch;
 
     <div class="logos">
       <div class="logos-slide">
-        <img src="clients/img_ncAbbott.png" alt="Logo 1" />
-        <img src="clients/img_ncAgilent.png" alt="Logo 2" />
-        <img src="clients/img_ncAirAsia.png" alt="Logo 3" />
-        <img src="clients/img_ncAMD.png" alt="Logo 4" />
-        <img src="clients/img_ncAnalogDevices.png" alt="Logo 5" />
-        <img src="clients/img_ncASE.png" alt="Logo 6" />
-        <img src="clients/img_ncAvago.png" alt="Logo 7" />
-        <img src="clients/img_ncBakerTilly.png" alt="Logo 6" />
-        <img src="clients/img_ncBankIslam.png" alt="Logo 7" />
-        <img src="clients/img_ncBbraun.png" alt="Logo 6" />
-        <img src="clients/img_ncBenchmark.png" alt="Logo 7" />
-        <img src="clients/img_ncBose.png" alt="Logo 6" />
-        <img src="clients/img_ncBroadcom.png" alt="Logo 7" />
-        <img src="clients/img_ncBSN.png" alt="Logo 6" />
-        <img src="clients/img_ncBursa.png" alt="Logo 7" />
-        <img src="clients/img_ncCELESTICA.png" alt="Logo 7" />
-        <img src="clients/img_ncCIMB.png" alt="Logo 7" />
-        <img src="clients/img_ncContinental.png" alt="Logo 7" />
-        <img src="clients/img_ncDell.png" alt="Logo 7" />
-        <img src="clients/img_ncDongWha.png" alt="Logo 7" />
-        <img src="clients/img_ncFirstSolar.png" alt="Logo 7" />
-        <img src="clients/img_ncFlextronics.png" alt="Logo 7" />
-        <img src="clients/img_ncFUJIE.png" alt="Logo 7" />
-        <img src="clients/img_ncHoneywell.png" alt="Logo 7" />
-        <img src="clients/img_ncHongLeong.png" alt="Logo 7" />
-        <img src="clients/img_ncHSBC.png" alt="Logo 7" />
-        <img src="clients/img_ncInfineon.png" alt="Logo 7" />
-        <img src="clients/img_ncJabil.png" alt="Logo 7" />
-        <img src="clients/img_ncJASolar.png" alt="Logo 7" />
-        <img src="clients/img_ncKellogg.png" alt="Logo 7" />
-        <img src="clients/img_ncKeySight.png" alt="Logo 7" />
-        <img src="clients/img_ncLHDN.png" alt="Logo 7" />
-        <img src="clients/img_ncLumileds.png" alt="Logo 7" />
-        <img src="clients/img_ncMaybank.png" alt="Logo 7" />
-        <img src="clients/img_ncMIDF.png" alt="Logo 7" />
-        <img src="clients/img_ncMMHE.png" alt="Logo 7" />
-        <img src="clients/img_ncMPPP.png" alt="Logo 7" />
-        <img src="clients/img_ncNI.png" alt="Logo 7" />
-        <img src="clients/img_ncNXP.png" alt="Logo 7" />
-        <img src="clients/img_ncOCBC.png" alt="Logo 7" />
-        <img src="clients/img_ncOneworld.png" alt="Logo 7" />
-        <img src="clients/img_ncOnsemi.png" alt="Logo 7" />
-        <img src="clients/img_ncPanasonic.png" alt="Logo 7" />
-        <img src="clients/img_ncPossehl.png" alt="Logo 7" />
-        <img src="clients/img_ncQcells.png" alt="Logo 7" />
-        <img src="clients/img_ncSanmina.png" alt="Logo 7" />
-        <img src="clients/img_ncSC.png" alt="Logo 7" />
-        <img src="clients/img_ncSeagate.png" alt="Logo 7" />
-        <img src="clients/img_ncSME.png" alt="Logo 7" />
-        <img src="clients/img_ncStm.png" alt="Logo 7" />
-        <img src="clients/img_ncSynthomer.png" alt="Logo 7" />
-        <img src="clients/img_ncUOA.png" alt="Logo 7" />
-        <img src="clients/img_ncWD.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncAbbott.png" alt="Logo 1" />
+        <img src="assets/images/clients/img_ncAgilent.png" alt="Logo 2" />
+        <img src="assets/images/clients/img_ncAirAsia.png" alt="Logo 3" />
+        <img src="assets/images/clients/img_ncAMD.png" alt="Logo 4" />
+        <img src="assets/images/clients/img_ncAnalogDevices.png" alt="Logo 5" />
+        <img src="assets/images/clients/img_ncASE.png" alt="Logo 6" />
+        <img src="assets/images/clients/img_ncAvago.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncBakerTilly.png" alt="Logo 6" />
+        <img src="assets/images/clients/img_ncBankIslam.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncBbraun.png" alt="Logo 6" />
+        <img src="assets/images/clients/img_ncBenchmark.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncBose.png" alt="Logo 6" />
+        <img src="assets/images/clients/img_ncBroadcom.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncBSN.png" alt="Logo 6" />
+        <img src="assets/images/clients/img_ncBursa.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncCELESTICA.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncCIMB.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncContinental.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncDell.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncDongWha.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncFirstSolar.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncFlextronics.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncFUJIE.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncHoneywell.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncHongLeong.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncHSBC.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncInfineon.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncJabil.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncJASolar.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncKellogg.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncKeySight.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncLHDN.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncLumileds.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncMaybank.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncMIDF.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncMMHE.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncMPPP.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncNI.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncNXP.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncOCBC.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncOneworld.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncOnsemi.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncPanasonic.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncPossehl.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncQcells.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncSanmina.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncSC.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncSeagate.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncSME.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncStm.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncSynthomer.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncUOA.png" alt="Logo 7" />
+        <img src="assets/images/clients/img_ncWD.png" alt="Logo 7" />
       </div>
     </div>
 
@@ -1819,7 +219,7 @@ align-self: stretch;
                   Established leaders since 2002, delivering unparalleled healthcare solutions.
                 </p>
               </div>
-              <img src="./1.png" alt="Database Icon" class="icon-image" />
+              <img src="./assets/images/1.png" alt="Database Icon" class="icon-image" />
             </div>
           </div>
           <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
@@ -1831,7 +231,7 @@ align-self: stretch;
                 </p>
                
               </div>
-              <img src="./2.png" alt="Globe Icon" class="icon-image" />
+              <img src="./assets/images/2.png" alt="Globe Icon" class="icon-image" />
             </div>
           </div>
           <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
@@ -1845,7 +245,7 @@ align-self: stretch;
                 <a class="card-link" href="/about.html">Learn More →</a>
               
                 </div>
-                <img src="./3.png" alt="Trophy Icon" class="icon-image" />
+                <img src="./assets/images/3.png" alt="Trophy Icon" class="icon-image" />
               </div>
             </div>
             <div class="col-lg-3 mb-4 d-flex half m-0 p-6">
@@ -1857,7 +257,7 @@ align-self: stretch;
                   </p>
                   
                 </div>
-                <img src="./4.png" alt="Badge Icon" class="icon-image" />
+                <img src="./assets/images/4.png" alt="Badge Icon" class="icon-image" />
               </div>
             </div>
           </div>
@@ -1887,7 +287,7 @@ align-self: stretch;
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
               <div class="card">
-                <img src="servicesnew/In-House Clinic Management.jpg" alt="In House Clinic Management" />
+                <img src="assets/images/servicesnew/In-House Clinic Management.jpg" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">In House Clinic Management</h2>
                   <p class="card-text">
@@ -1902,7 +302,7 @@ health and productivity for organizational success.
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter2">
               <div class="card">
-                <img src="servicesnew/Out-Patient Benefit Management.jpg" alt="In House Clinic Management" />
+                <img src="assets/images/servicesnew/Out-Patient Benefit Management.jpg" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">Out-Patient Benefits Administration</h2>
                   <p class="card-text">
@@ -1917,7 +317,7 @@ ensuring efficient administration and an enhanced user experience.
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter3">
               <div class="card">
-                <img src="servicesnew/In-Patient Management.jpg" alt="In House Clinic Management" />
+                <img src="assets/images/servicesnew/In-Patient Management.jpg" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">In-Patient Benefits Administration</h2>
                   <p class="card-text">
@@ -1932,7 +332,7 @@ prompt, reliable service for corporate organizations.
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter4">
               <div class="card">
-                <img src="/servicesnew/MedicalSurveillance_AudiometryTest.jpg" alt="In House Clinic Management" />
+                <img src="assets/images/servicesnew/MedicalSurveillance_AudiometryTest.jpg" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">Medical Surveillance & Audiometry Test</h2>
                   <p class="card-text">
@@ -1948,7 +348,7 @@ environment.
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter5">
               <div class="card">
-                <img src="/services/s5.png" alt="In House Clinic Management" />
+                <img src="assets/images/services/s5.png" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">Work Place Health Screening & Wellness Program</h2>
                   <p class="card-text">
@@ -1963,7 +363,7 @@ fostering a culture of proactive employee well-being.
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter6">
               <div class="card">
-                <img src="/servicesnew/Medicine _ Medical Equipments Supply.jpg" alt="In House Clinic Management" />
+                <img src="assets/images/servicesnew/Medicine _ Medical Equipments Supply.jpg" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">Medicine & Medical Equipments Supply</h2>
                   <p class="card-text">
@@ -1978,7 +378,7 @@ medications, ensuring accessibility without compromising on quality.
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter7">
               <div class="card">
-                <img src="/services/s7.png" alt="In House Clinic Management" />
+                <img src="assets/images/services/s7.png" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">Doctors & Nurses Outsourcing</h2>
                   <p class="card-text">
@@ -1994,7 +394,7 @@ healthcare delivery without the need for permanent employment by the client.
             <div class="swiper-slide">
               <a href="#" data-toggle="modal" data-target="#exampleModalCenter8">
               <div class="card">
-                <img src="/servicesnew/Telemedicine Services.jpg" alt="In House Clinic Management" />
+                <img src="assets/images/servicesnew/Telemedicine Services.jpg" alt="In House Clinic Management" />
                 <div class="card-body">
                   <h2 class="card-title">Telemedicine Services</h2>
                   <p class="card-text">
@@ -2021,14 +421,14 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
             <div class="shift">
               <div class="col">
                 <div class="testimonial-card">
-                  <img src="quote.png">
+                  <img src="assets/images/quote.png">
                     <p>
                       Recommended ASP Doctors for their professional and approachable services.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="clients/img_ncFUJIE.png"
+                      src="assets/images/clients/img_ncFUJIE.png"
                       alt="Fuji Electric (M) Sdn. Bhd."
                       class="testimonial-logo"
                     />
@@ -2037,14 +437,14 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
               </div>
               <div class="col">
                 <div class="testimonial-card">
-                  <img src="quote.png">
+                  <img src="assets/images/quote.png">
                     <p>
                       Nurses at Kulim In House Clinic are giving excellent services and committed.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="clients/img_ncInfineon.png"
+                      src="assets/images/clients/img_ncInfineon.png"
                       alt="Infineon Technologies (M) Sdn. Bhd."
                       class="testimonial-logo"
                     />
@@ -2053,14 +453,14 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
               </div>
               <div class="col">
                 <div class="testimonial-card">
-                  <img src="quote.png">
+                  <img src="assets/images/quote.png">
                     <p>
                       TPA Admin person in-charged is very diligent and timely in carrying out his duty. Very responsive to our email.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="clients/img_ncSynthomer.png"
+                      src="assets/images/clients/img_ncSynthomer.png"
                       alt="Synthomer Malaysia"
                       class="testimonial-logo"
                     />
@@ -2074,14 +474,14 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
             <div class="shift-2">
               <div class="col">
                 <div class="testimonial-card">
-                  <img src="quote.png">
+                  <img src="assets/images/quote.png">
                     <p>
                       ASP Call Centre is very responsive in solving issues related to panel clinic.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="clients/img_ncMPPP.png"
+                      src="assets/images/clients/img_ncMPPP.png"
                       alt="Majlis Bandaraya Pulau Pinang"
                       class="testimonial-logo"
                     />
@@ -2090,14 +490,14 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
               </div>
               <div class="col">
                 <div class="testimonial-card">
-                  <img src="quote.png">
+                  <img src="assets/images/quote.png">
                     <p>
                       All the doctors and nurses located in Sanmina Penang Plant 2 have provided good services. 
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="clients/img_ncSanmina.png"
+                      src="assets/images/clients/img_ncSanmina.png"
                       alt="Sanmina-SCI Systems (M) Sdn Bhd"
                       class="testimonial-logo"
                     />
@@ -2106,14 +506,14 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
               </div>
               <div class="col">
                 <div class="testimonial-card">
-                  <img src="quote.png">
+                  <img src="assets/images/quote.png">
                     <p>
                       Overall service by ASP is satisfactory.
                     </p>
                   <div class="testimonial-footer">
                     <div class="line"></div>
                     <img
-                      src="clients/img_ncBroadcom3.png"
+                      src="assets/images/clients/img_ncBroadcom3.png"
                       alt="Avago Technologies (M) Sdn Bhd"
                       class="testimonial-logo"
                     />
@@ -2145,37 +545,37 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="posters/1.png" alt="In House Clinic Management" />
+                    <img src="assets/images/posters/1.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="posters/2.png" alt="In House Clinic Management" />
+                    <img src="assets/images/posters/2.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="posters/3.png" alt="In House Clinic Management" />
+                    <img src="assets/images/posters/3.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="posters/4.png" alt="In House Clinic Management" />
+                    <img src="assets/images/posters/4.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="posters/5.png" alt="In House Clinic Management" />
+                    <img src="assets/images/posters/5.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="posters/6.png" alt="In House Clinic Management" />
+                    <img src="assets/images/posters/6.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="posters/7.png" alt="In House Clinic Management" />
+                    <img src="assets/images/posters/7.png" alt="In House Clinic Management" />
                   </div>
                 </div>
                 <div class="swiper-slide mobile">
@@ -2450,7 +850,7 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
           <!-- Confirmation Step -->
           <div class="form-step" id="stepConfirmation">
             <div class="confirmation-message">
-              <img src="check-circle.svg" class="c-icon"/>
+              <img src="assets/images/check-circle.svg" class="c-icon"/>
               <p class="c-title">Your request has been submitted successfully!</p>
               <p class="c-sub">
                 We will contact you within 3-5 working days to arrange a demo.
@@ -2475,12 +875,12 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
         <h5 class="footer-title">Call Centre / Helpdesk</h5>
         <div class="row">
           <div class="col-md-3 col-sm-6">
-            <p>  <img src="phone.svg"/>+604 - 2020909</p>
+            <p>  <img src="assets/images/phone.svg"/>+604 - 2020909</p>
           </div>
           <div class="col-md-3 col-sm-6">
             <p>
                 
-                <img src="printer.svg"/>
+                <img src="assets/images/printer.svg"/>
                 
                 +604 - 2020909</p>
           </div>
@@ -2488,10 +888,10 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
         </div>
         <div class="row">
           <div class="col-md-3 col-sm-6">
-            <p>  <img src="wa.svg"/>+6016 - 4123488</p>
+            <p>  <img src="assets/images/wa.svg"/>+6016 - 4123488</p>
           </div>
           <div class="col-md-3 col-sm-6">
-            <p>   <img src="skype.svg"/> ASP PGHELPDESK</p>
+            <p>   <img src="assets/images/skype.svg"/> ASP PGHELPDESK</p>
           </div>
         </div>
         <div class="row" style="margin-bottom: 24px;">
@@ -2515,15 +915,15 @@ prescriptions, ensuring convenient and timely healthcare access for patients.
       <!-- Kuala Lumpur Office -->
       <div class="col-md-6">
         <h5 class="footer-title">Kuala Lumpur Office</h5>
-        <p> <img src="phone.svg"/>+603 - 2022677</p>
+        <p> <img src="assets/images/phone.svg"/>+603 - 2022677</p>
         <div class="address-box">
-          <img src="pin.svg"/>
+          <img src="assets/images/pin.svg"/>
         <p>
              Unit 13.2 (Tingkat 13),
           Wisma Lee Rubber, No. 1, Jalan Melaka, 50100 Kuala Lumpur, Wilayah
           Persekutuan
         </p>
-        <img src="waze.svg" />
+        <img src="assets/images/waze.svg" />
         </div>
         <!-- Insert map image or embed here -->
         <iframe
@@ -2540,15 +940,15 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group,+Jalan+Melak
       <!-- Penang Office -->
       <div class="col-md-6">
         <h5 class="footer-title">Penang Office</h5>
-        <p> <img src="phone.svg"/>+604 - 2916765</p>
+        <p> <img src="assets/images/phone.svg"/>+604 - 2916765</p>
         <div class="address-box">
-          <img src="pin.svg"/> 
+          <img src="assets/images/pin.svg"/> 
             <p>
                No.3, R-02-09, Setia
               Triangle Tower Shop Office, Persiaran Kelicap, 11900 Bayan Lepas,
               Penang.
             </p>
-            <img src="waze.svg" />
+            <img src="assets/images/waze.svg" />
         </div>
         <!-- Insert map image or embed here -->
         <iframe
@@ -2589,7 +989,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="servicesnew/In-House Clinic Management.jpg" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/servicesnew/In-House Clinic Management.jpg" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg1 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>Large employers are setting up primary care medical centers within their offices and factories to provide convenient and affordable healthcare for their employees.</p>
@@ -2629,7 +1029,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="/servicesnew/Out-Patient Benefit Management.jpg" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/servicesnew/Out-Patient Benefit Management.jpg" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg2 mb-4"></div>
         <div class="modal-text-content mb-4">
           <p>Services Offered:</p>
@@ -2682,7 +1082,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="/servicesnew/In-Patient Management.jpg" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/servicesnew/In-Patient Management.jpg" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg3 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>Services Offered:</p>
@@ -2721,7 +1121,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="/servicesnew/MedicalSurveillance_AudiometryTest.jpg" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/servicesnew/MedicalSurveillance_AudiometryTest.jpg" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg4 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>Malaysia is taking great steps to be an industrialized nation by the year 2020. This will entail heavy and extensive use of chemicals. The purpose of medical surveillance is for the early identification of conditions, if any, that could present an increased risk of adverse health effects related to the task being performed.</p>
@@ -2768,7 +1168,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="/services/ss5.png" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/services/ss5.png" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg5 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>We conducts corporate health screenings or blood test for thousands of employees nationwide. Health screening is made easy with our on-site health screening wellness team deployed right at your office. Some of the available screenings include blood screening, cholesterol screenings, blood glucose measurements, blood pressure measurements and body fat analysis. The important of health screening result provide current and potential medical illness can be a key to the early detection of chronic illnesses.</p>
@@ -2811,7 +1211,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="/servicesnew/Medicine _ Medical Equipments Supply.jpg" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/servicesnew/Medicine _ Medical Equipments Supply.jpg" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg6 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>Drugs and medical equipments are essential elements of all functioning health systems. 
@@ -2845,7 +1245,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="/services/ss7.png" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/services/ss7.png" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg7 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>Companies in house clinic face critical shortages of doctors and nurses.</p>
@@ -2879,7 +1279,7 @@ src="https://www.google.com/maps/embed/v1/place?q=ASP+Medical+Group+(Penang+HQ),
         </button>
       </div>
       <div class="modal-body">
-        <!-- <img class="mb-4" src="/servicesnew/Telemedicine Services.jpg" alt="" width="100%" height="211"> -->
+        <!-- <img class="mb-4" src="assets/images/servicesnew/Telemedicine Services.jpg" alt="" width="100%" height="211"> -->
         <div class="modal-body-image simg8 mb-4"></div>
         <div class="modal-text-content mb-4">
         <p>Through ASP Healthcare mobile apps, we provide the following telemedicine services:</p>
@@ -3108,11 +1508,11 @@ function toggleIcon(element) {
         },
       });
 
-      $(document).ready(function() {
-        $('#benefits').multiselect({
-          includeSelectAllOption: true,
-        });
-    });
+    //   $(document).ready(function() {
+    //     $('#benefits').multiselect({
+    //       includeSelectAllOption: true,
+    //     });
+    // });
     </script>
 
     <!-- Bootstrap JS and dependencies -->
